@@ -1,6 +1,6 @@
 # Game Title
 ## Platform
-Itch.io <img src="https://static-00.iconduck.com/assets.00/itch-io-icon-512x512-wwio9bi8.png" />
+<img src="https://static-00.iconduck.com/assets.00/itch-io-icon-512x512-wwio9bi8.png" width="24" />  - Itch.io 
 ## Target Age
 ***
 ## Rating
