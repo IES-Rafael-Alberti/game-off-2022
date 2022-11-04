@@ -1,8 +1,6 @@
-# game-off-2022
-
 # Game Title
 ## Platform
-Itch.io 
+Itch.io <img src="https://static-00.iconduck.com/assets.00/itch-io-icon-512x512-wwio9bi8.png" />
 ## Target Age
 ***
 ## Rating
@@ -16,10 +14,10 @@ the tower where the princess is imprisoned.
 Players travel throught this land fighting enemies and talking with people you encounter. You can upgrade your weapon by finding weath spikes. Find all the cliches we have hidden!
 
 ## USP (Unique Selling Points)
-• Fun and unique Story.
-• Special Bosses and enemies each level.
-• Forge the Great Baguette.
-• Find every hidden cliche.
+- Fun and unique Story.
+- Special Bosses and enemies each level.
+- Forge the Great Baguette.
+- Find every hidden cliche.
 
 ## Similar competitive products;
 Shovel Knight, Undertale, ""
