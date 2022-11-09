@@ -9,11 +9,13 @@ public class PlayerAnimation : MonoBehaviour
     private Rigidbody2D rb;
     private Animator properties;
     private PlayerCombat combatController;
+    private PlayerHealth playerHealth;
     void Start()
     {
         rb = transform.parent.GetComponent<Rigidbody2D>();
         properties = GetComponent<Animator>();
         combatController = transform.parent.GetComponent<PlayerCombat>();
+        playerHealth = transform.parent.GetComponent<PlayerHealth>();
     }
 
     
@@ -22,5 +24,6 @@ public class PlayerAnimation : MonoBehaviour
         properties.SetBool("isMoving",Mathf.Abs(rb.velocity.x)>movingMargin);
         properties.SetBool("isFalling", Mathf.Abs(rb.velocity.y) > fallingMargin);
         properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
+        properties.SetBool("isDead", playerHealth.health <= 0);
     }
 }
