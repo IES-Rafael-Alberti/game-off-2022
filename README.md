@@ -1,5 +1,4 @@
-# Game Title
-Baker's Bizarre Adventure
+# Baker's Bizarre Adventure
 ## Platform
 PC
 ## Target Age
