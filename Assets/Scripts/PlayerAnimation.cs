@@ -21,6 +21,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         properties.SetBool("isMoving",Mathf.Abs(rb.velocity.x)>movingMargin);
         properties.SetBool("isFalling", Mathf.Abs(rb.velocity.y) > fallingMargin);
-        properties.SetBool("isAtacking", combatController.attackHitBox.gameObject.activeSelf);
+        properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
     }
 }
