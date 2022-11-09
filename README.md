@@ -1,8 +1,9 @@
 # Game Title
+Baker's Bizarre Adventure
 ## Platform
-<img src="https://static-00.iconduck.com/assets.00/itch-io-icon-512x512-wwio9bi8.png" width="24" />  - Itch.io 
+PC
 ## Target Age
-***
+For all ages 
 ## Rating
 ***
 ## Game Summary: 
@@ -20,4 +21,4 @@ Players travel throught this land fighting enemies and talking with people you e
 - Find every hidden cliche.
 
 ## Similar competitive products;
-Shovel Knight, Undertale, ""
+Shovel Knight, Undertale...
