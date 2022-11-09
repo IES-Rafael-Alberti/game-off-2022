@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class healthController : MonoBehaviour
+   
 {
     public int health;
 
-    // Start is called before the first frame update
-    void Start()
+    private Animator animationChar;
+
+    private void Reset()
     {
-        
+        health = 3;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RecieveDamage(int damage)
     {
-        
+         health=-damage;
+
     }
 
-    public void RecieveDamage()
+    public bool IsDead()
     {
-        health--;
-    }
-
-    public bool IsAlive()
-    {
-        if (health >= 0)
+        if (health > 0)
         {
-            return true;
+            return false;  
         }
         else
         {
-            return false;
+            //Implemented with Transition -> animationChar.SetBool("isDead", true);
+            animationChar.Play("Death");
+            this.gameObject.SetActive(false);
+            return true;
         }
     }
 }
