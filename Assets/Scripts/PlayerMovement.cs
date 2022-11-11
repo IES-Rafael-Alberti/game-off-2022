@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     public float jumpForce = 17f;
     public float jumpMargin = 0.4f;
+    public int jumps = 2;
+    public int initialJumps;
 
     private float inputX;
-    private int jumps = 2;
-    private int initialJumps;
     private Rigidbody2D physics;
 
     // Start is called before the first frame update
@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
             physics.velocity = new Vector2(physics.velocity.x, jumpForce);
 
         }
+
+        // Flip player
+        if (inputX > 0) transform.localScale = Vector3.one;
+        else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
