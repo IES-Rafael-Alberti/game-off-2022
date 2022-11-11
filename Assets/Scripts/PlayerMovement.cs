@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
             physics.velocity = new Vector2(physics.velocity.x, jumpForce);
 
         }
+
+        // Flip player
+        if (inputX > 0) transform.localScale = Vector3.one;
+        else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
