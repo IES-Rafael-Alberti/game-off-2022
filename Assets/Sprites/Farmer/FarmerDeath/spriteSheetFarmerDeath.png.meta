@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09a79fe89779bfb4e9920d4e66375b0e
+guid: ae58c9aac9982804cb56871088ead20f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,70 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 68
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851d6f3e3d05eb84096ed687cc56c980
-      internalID: -1567493633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_1
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 68
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79bbf7f2d2eca284ca9112c1745a0827
-      internalID: 418017853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 68
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e84a99329065cf343b9c24111eac103c
-      internalID: 1519469793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_3
+      name: spriteSheetFarmerDeath_0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3cc266246f6c04786cfd12110c6d4b
-      internalID: 211477227
+      spriteID: 6f077231b7e698e48b4df1688ceca59d
+      internalID: 940401517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_4
+      name: spriteSheetFarmerDeath_1
       rect:
         serializedVersion: 2
         x: 34
@@ -215,35 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 125074cc628bd8a4395b3e746a1805ec
-      internalID: 1247340618
+      spriteID: 6fb3751629e4b964b9130e03905a1417
+      internalID: 2069596338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_5
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 34
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b298153e6874fa4280d85a82024c351
-      internalID: 1991953139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_6
+      name: spriteSheetFarmerDeath_2
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c9885e92a5c724a979f9a517934d9b
-      internalID: 15447028
+      spriteID: 92e6896da2cf57541acc3cfe17724c32
+      internalID: 276576283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheetFarmerAtack_7
+      name: spriteSheetFarmerDeath_3
       rect:
         serializedVersion: 2
         x: 34
@@ -278,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef4881e809aafb4fb540589aa9e7717
-      internalID: -2043066405
+      spriteID: 294c5a26bf92bf94993b4f8cedaace68
+      internalID: 281109418
       vertices: []
       indices: 
       edges: []
@@ -295,14 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpriteSheetFarmerAtack_3: 211477227
-      SpriteSheetFarmerAtack_0: -1567493633
-      SpriteSheetFarmerAtack_7: -2043066405
-      SpriteSheetFarmerAtack_4: 1247340618
-      SpriteSheetFarmerAtack_2: 1519469793
-      SpriteSheetFarmerAtack_1: 418017853
-      SpriteSheetFarmerAtack_5: 1991953139
-      SpriteSheetFarmerAtack_6: 15447028
+      spriteSheetFarmerDeath_1: 2069596338
+      spriteSheetFarmerDeath_3: 281109418
+      spriteSheetFarmerDeath_0: 940401517
+      spriteSheetFarmerDeath_2: 276576283
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
