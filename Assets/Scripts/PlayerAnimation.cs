@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     public float movingMargin = 0.1f;
     public float fallingMargin = 0.1f;
 
+    private PlayerMovement pm;
     private Rigidbody2D rb;
     private Animator properties;
     private PlayerCombat combatController;
@@ -14,6 +15,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void Start()
     {
+        pm = transform.parent.GetComponent<PlayerMovement>();
         rb = transform.parent.GetComponent<Rigidbody2D>();
         properties = GetComponent<Animator>();
         combatController = transform.parent.GetComponent<PlayerCombat>();
@@ -24,7 +26,7 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         properties.SetBool("isMoving",Mathf.Abs(rb.velocity.x)>movingMargin);
-        properties.SetBool("isFalling", Mathf.Abs(rb.velocity.y) > fallingMargin);
+        properties.SetBool("isFalling", pm.jumps < pm.initialJumps);
         properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
         properties.SetBool("isDead", playerHealth.health <= 0);
     }
