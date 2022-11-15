@@ -6,7 +6,7 @@ For all ages
 ## Rating
 ***
 ## Game Summary: 
-You are "" ,a french baker that have money issues. One day he saw that the king is looking for some hero to rescue the pricess that has been capture.
+You are Maurice ,a french baker that have money issues. One day he saw that the king was looking for some hero to rescue the princess that has been capture.
 In order to never work again you are led to an adventure throught this strange land. Improve your incredible weapon and fight bandits and other kind of enemies until you reach
 the tower where the princess is imprisoned.
 
@@ -20,4 +20,4 @@ Players travel throught this land fighting enemies and talking with people you e
 - Find every hidden cliche.
 
 ## Similar competitive products;
-Shovel Knight, Undertale...
+Shovel Knight, Super Mario Bros, Reventure. 
