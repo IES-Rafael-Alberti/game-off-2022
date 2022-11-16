@@ -4023,6 +4023,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.5, y: 0.4}
   m_Direction: 1
+--- !u!114 &234533273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234533269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5113903842346cc44aee9cc54b0662c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &240604907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40752,6 +40765,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8938698344056887321, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+      propertyPath: m_TagString
+      value: PlayerHitbox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
 --- !u!1 &426547925 stripped
@@ -41561,7 +41578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3170738, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -1.1595325, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41859,6 +41876,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1104817849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104817845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5113903842346cc44aee9cc54b0662c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1113621650
 GameObject:
   m_ObjectHideFlags: 0
@@ -105557,7 +105587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5997e83f9a5f787479eed7541b91aa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 3
   gameOverMargin: 5
 --- !u!1 &2019014443
 GameObject:
@@ -105936,6 +105966,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2697960274334999843, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_TagString
+      value: EnemyHitbox
+      objectReference: {fileID: 0}
     - target: {fileID: 4790051822816838541, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -105951,6 +105985,10 @@ PrefabInstance:
     - target: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7744510126104586557, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: range
