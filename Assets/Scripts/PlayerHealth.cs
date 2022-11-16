@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Trigger Entered");
         if( collision.tag == "Death")
         {
+            health = 0;
             StartCoroutine(GameOver());
         }
     }

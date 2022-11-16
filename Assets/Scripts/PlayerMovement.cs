@@ -11,34 +11,45 @@ public class PlayerMovement : MonoBehaviour
     public int jumps = 2;
     public int initialJumps;
 
+    private PlayerHealth playerHealth; 
     private float inputX;
     private Rigidbody2D physics;
+    private bool acceptInput = true;
 
     // Start is called before the first frame update
     void Start()
     {
         physics = GetComponent<Rigidbody2D>();
+        playerHealth = GetComponent<PlayerHealth>();
         initialJumps = jumps;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Horizontal movement
-        inputX = Input.GetAxis("Horizontal");
-        physics.velocity = new Vector2(inputX * speed, physics.velocity.y);
-
-        // Jump and Double jump code
-        if (Input.GetAxis("Vertical") > 0 && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
+        if (playerHealth.health <= 0) acceptInput = false;
+        if (acceptInput)
         {
-            jumps -= 1;
-            physics.velocity = new Vector2(physics.velocity.x, jumpForce);
+            // Horizontal movement
+            inputX = Input.GetAxis("Horizontal");
+            physics.velocity = new Vector2(inputX * speed, physics.velocity.y);
 
+            // Jump and Double jump code
+            if (Input.GetAxis("Vertical") > 0 && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
+            {
+                jumps -= 1;
+                physics.velocity = new Vector2(physics.velocity.x, jumpForce);
+
+            }
+
+            // Flip player
+            if (inputX > 0) transform.localScale = Vector3.one;
+            else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
         }
-
-        // Flip player
-        if (inputX > 0) transform.localScale = Vector3.one;
-        else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
+        else
+        {
+            physics.velocity = Vector2.zero;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
