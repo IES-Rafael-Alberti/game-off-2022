@@ -10,15 +10,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger");
+        Debug.Log("Trigger Entered");
         if( collision.tag == "Death")
         {
-            RecieveDamage(5f);
+            StartCoroutine(GameOver());
         }
     }
     public void RecieveDamage(float damage)
     {
-        Debug.Log("Daño ="+ damage);
+        Debug.Log("Damage ="+ damage);
         health -= damage;
         if (health <= 0) StartCoroutine(GameOver());
     }
