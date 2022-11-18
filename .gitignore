@@ -58,4 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-UserSettings/EditorUserSettings.asset
+# Unity Layout 
+/UserSettings/Layouts/default-2021.dwlt
+/UserSettings/EditorUserSettings.asset
