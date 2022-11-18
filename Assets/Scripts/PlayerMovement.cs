@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumps = 2;
     public int initialJumps;
 
+    private DefaultEvent lastEvent;
     private PlayerHealth playerHealth; 
     private float inputX;
     private Rigidbody2D physics;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (playerHealth.health <= 0) acceptInput = false;
         if (acceptInput)
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             physics.velocity = new Vector2(inputX * speed, physics.velocity.y);
 
             // Jump and Double jump code
-            if (Input.GetAxis("Vertical") > 0 && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
+            if (Input.GetButtonDown("Jump") && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
             {
                 jumps -= 1;
                 physics.velocity = new Vector2(physics.velocity.x, jumpForce);
@@ -56,5 +57,35 @@ public class PlayerMovement : MonoBehaviour
     {
         // Condition to refresh jumps (The collision object must have 'Ground' tag)
         if (collision.collider.CompareTag("Ground")) jumps = initialJumps;
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Event")) {
+            lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            lastEvent.EventOnTrigger(this);
+        } 
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetButton("Interact"))
+        {
+            if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            lastEvent.EventOnStay(this);
+        }
+        
+    }
+    public void StopInput()
+    {
+        acceptInput = false;
+    }
+    public void ReceiveInput()
+    {
+        acceptInput = true;
+    }
+    public bool CanMove()
+    {
+        return acceptInput;
     }
 }
