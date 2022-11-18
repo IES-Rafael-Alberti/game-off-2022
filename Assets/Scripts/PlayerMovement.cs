@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumps = 2;
     public int initialJumps;
 
+    private DefaultEvent lastEvent;
     private PlayerHealth playerHealth; 
     private float inputX;
     private Rigidbody2D physics;
@@ -56,5 +57,18 @@ public class PlayerMovement : MonoBehaviour
     {
         // Condition to refresh jumps (The collision object must have 'Ground' tag)
         if (collision.collider.CompareTag("Ground")) jumps = initialJumps;
+        if (collision.collider.CompareTag("Event")) lastEvent = collision.collider.gameObject.GetComponent<DefaultEvent>();
+        lastEvent.EventOnTrigger();
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetAxis("Interact") > 0)
+        {
+            if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            lastEvent.EventOnStay();
+        }
+        
+    }
+
 }
