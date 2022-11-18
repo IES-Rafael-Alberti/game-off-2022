@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (playerHealth.health <= 0) acceptInput = false;
         if (acceptInput)
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             physics.velocity = new Vector2(inputX * speed, physics.velocity.y);
 
             // Jump and Double jump code
-            if (Input.GetAxis("Vertical") > 0 && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
+            if (Input.GetButtonDown("Jump") && jumps > 0 && Mathf.Abs(physics.velocity.y) < jumpMargin)
             {
                 jumps -= 1;
                 physics.velocity = new Vector2(physics.velocity.x, jumpForce);
