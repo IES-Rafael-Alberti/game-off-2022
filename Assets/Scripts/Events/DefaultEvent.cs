@@ -6,8 +6,8 @@ using UnityEngine;
 public class DefaultEvent : MonoBehaviour, IEvent
 {
 
-    public void EventOnStay(PlayerMovement player) {}
+    public virtual void EventOnStay(PlayerMovement player) {}
 
-    public void EventOnTrigger(PlayerMovement player) {}
+    public virtual void EventOnTrigger(PlayerMovement player) {}
 
 }

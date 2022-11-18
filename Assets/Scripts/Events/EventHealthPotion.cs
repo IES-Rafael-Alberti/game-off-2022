@@ -5,16 +5,12 @@ using UnityEngine;
 public class EventHealthPotion : DefaultEvent
 {
 
-    public float recoveryPoints = 1;
+    public float damage = -1;
 
-    private PlayerHealth player;
-    private void Start()
+    public override void EventOnTrigger(PlayerMovement player)
     {
-        
-    }
-
-    void EventOnTrigger()
-    {
-
+        Debug.Log("hola");
+        player.gameObject.GetComponent<PlayerHealth>().RecieveDamage(damage);
+        gameObject.SetActive(false);
     }
 }
