@@ -10,7 +10,7 @@ public class DialogueController : MonoBehaviour
     public TextMeshProUGUI dialogueTitleText;
     private List<string> dialogueList;
     private int dialogueIndex;
-    
+    public PlayerMovement player;
     public void NewDialogue(string title,List<string> dialogues)
     {
         dialogueIndex = 0;
@@ -27,5 +27,6 @@ public class DialogueController : MonoBehaviour
     }
     public void EndDialogue() {
         dialogueSet.SetActive(false);
+        player.ReceiveInput();
     }
 }

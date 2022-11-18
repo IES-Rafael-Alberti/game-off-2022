@@ -63,19 +63,29 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Event")) {
             lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
-            Debug.Log(lastEvent);
             lastEvent.EventOnTrigger(this);
         } 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetAxis("Interact") > 0)
+        if (Input.GetButton("Interact"))
         {
             if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
             lastEvent.EventOnStay(this);
         }
         
     }
-
+    public void StopInput()
+    {
+        acceptInput = false;
+    }
+    public void ReceiveInput()
+    {
+        acceptInput = true;
+    }
+    public bool CanMove()
+    {
+        return acceptInput;
+    }
 }

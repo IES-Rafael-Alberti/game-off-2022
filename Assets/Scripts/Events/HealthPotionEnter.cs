@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventHealthPotion : DefaultEvent
+public class HealthPotionEnter : DefaultEvent
 {
 
     public float damage = -1;
