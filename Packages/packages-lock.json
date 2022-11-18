@@ -212,6 +212,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.recorder": {
       "version": "3.0.3",
       "depth": 1,
@@ -221,6 +222,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
       "depth": 1,
@@ -249,6 +252,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.sequences": {
       "version": "1.0.4",
       "depth": 1,
@@ -261,6 +265,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.services.core": {
       "version": "1.4.2",
       "depth": 1,
@@ -272,6 +278,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.settings-manager": {
       "version": "1.0.3",
       "depth": 2,
@@ -279,6 +286,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.shadergraph": {
       "version": "12.1.7",
       "depth": 1,
