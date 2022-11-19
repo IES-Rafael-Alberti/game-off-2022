@@ -27,9 +27,8 @@ url: "https://ies-rafael-alberti.github.io/game-off-2022/" # the base hostname &
 twitter_username: BabushaStudio 
 
 # Build settings
-remote_theme: pages-themes/merlot@v0.2.0
+theme: Merlot
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
 
 # Exclude from processing.
