@@ -20,7 +20,7 @@
 
 title: Baker's Bizarre Adventure
 email: babushastudio@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: We post here information about our game # this means to ignore newlines until "baseurl:"
   
 baseurl: "/game-off-2022" # the subpath of your site, e.g. /blog
 url: "https://ies-rafael-alberti.github.io/game-off-2022/" # the base hostname & protocol for your site, e.g. http://example.com
