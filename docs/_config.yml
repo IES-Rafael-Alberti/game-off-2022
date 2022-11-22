@@ -27,7 +27,7 @@ url: "https://IES-Rafael-Alberti.github.io" # the base hostname & protocol for y
 twitter_username: BabushaStudio 
 
 # Build settings
-remote_theme: pages-themes/merlot@v0.2.0
+theme: merlot
 plugins:
   - jekyll-remote-theme 
   - jekyll-feed
