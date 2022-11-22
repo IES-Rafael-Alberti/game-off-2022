@@ -23,7 +23,7 @@ email: babushastudio@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   We are posting here thning about our game.
 baseurl: "/game-off-2022" # the subpath of your site, e.g. /blog
-url: "https://ies-rafael-alberti.github.io/game-off-2022/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ies-rafael-alberti.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: BabushaStudio 
 
 # Build settings
