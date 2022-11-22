@@ -8,6 +8,6 @@ public class DefaultEvent : MonoBehaviour, IEvent
 
     public virtual void EventOnStay(PlayerMovement player) {}
 
-    public virtual void EventOnTrigger(PlayerMovement player) {}
+    public virtual void EventOnEnter(PlayerMovement player) {}
 
 }

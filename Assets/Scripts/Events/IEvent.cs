@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IEvent
 {
-    void EventOnTrigger(PlayerMovement player);
+    void EventOnEnter(PlayerMovement player);
     void EventOnStay(PlayerMovement player);
 
 }
