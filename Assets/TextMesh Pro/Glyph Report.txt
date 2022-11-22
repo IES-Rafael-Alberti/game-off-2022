@@ -1,0 +1,15 @@
+Font: Yeon Sung  Style: Regular
+Point Size: 73   SP/PD Ratio: 6,8%
+
+Characters included: 96/99
+Missing characters: 3
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 32	Hex: 20	Char [ ]
+ID: 160	Hex: A0	Char [ ]
+ID: 8203	Hex: 200B	Char [​]
+
+Characters excluded from packing:
+----------------------------------------

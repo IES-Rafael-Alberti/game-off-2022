@@ -8,9 +8,14 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float gameOverMargin = 5f;
 
+    private float initialHealth;
+    private void Start()
+    {
+        initialHealth = health;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger Entered");
         if( collision.tag == "Death")
         {
             health = 0;
@@ -21,7 +26,11 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Damage ="+ damage);
         health -= damage;
-        if (health <= 0) StartCoroutine(GameOver());
+        if (health <= 0) {
+            health = 0;
+            StartCoroutine(GameOver());
+        }
+        if (health > initialHealth) health = initialHealth;
     }
     IEnumerator GameOver()
     {

@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  hasHit: 1
 --- !u!1 &7744510124680779696
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,5 +309,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5997e83f9a5f787479eed7541b91aa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   gameOverMargin: 5
