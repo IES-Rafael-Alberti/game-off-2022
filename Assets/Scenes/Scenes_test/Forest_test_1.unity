@@ -3993,6 +3993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Village Props - Road Sign - B
       objectReference: {fileID: 0}
+    - target: {fileID: 3008790804299420976, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}
+      propertyPath: m_TagString
+      value: Event
+      objectReference: {fileID: 0}
     - target: {fileID: 3008790804299420990, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -42103,6 +42107,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754813390}
   m_CullTransparentMesh: 1
+--- !u!1 &841041856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3008790804299420976, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}
+  m_PrefabInstance: {fileID: 240604907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847761276
 GameObject:
   m_ObjectHideFlags: 0
@@ -42158,6 +42167,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3008790804299420990, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}
   m_PrefabInstance: {fileID: 240604907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &884771226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841041856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f45d56d5750c340b78336dd6da0e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  font: {fileID: 12800000, guid: de53cdd698c9d3349b5208d0dd9c039c, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  fontSize: 18
+  alpha: 0.9
+  text: 'Beware: Entering the Forest'
+  background: {fileID: 2800000, guid: 4d6a99baee23b654f9e4bb672ae0b438, type: 3}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 250
+    height: 70
+  textOffset: {x: -2.8, y: 2, z: 0}
+  imageOffset: {x: -2.8, y: 2, z: 0}
+--- !u!114 &884771227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841041856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc9e0fec0d31d9468b72ee133ed8f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpDuration: 2
+--- !u!61 &884771228
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841041856}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.014531136, y: 0.828125}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.515, y: 0}
+    oldSize: {x: 0.96875, y: 1.65625}
+    newSize: {x: 0.96875, y: 1.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96875, y: 1.65625}
+  m_EdgeRadius: 0
 --- !u!1 &925413880
 GameObject:
   m_ObjectHideFlags: 0
