@@ -4392,6 +4392,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+--- !u!1001 &288102319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: title
+      value: Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 1076088064}
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: "He perdido a mi hermana en el bosque, una anciana le ofreci\xF3 golosinas
+        si la acompa\xF1aba a su casa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: "\xA1Quiero volver con mi mam\xE1!."
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248209, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423007785402248223, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
+      propertyPath: m_Name
+      value: BoyNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
 --- !u!4 &342138837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1755214644681904956, guid: f39426a001c71d84999be2ee63c7d322, type: 3}
@@ -41919,7 +42009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.333332, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -1.1529408, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
