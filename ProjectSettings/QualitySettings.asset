@@ -202,11 +202,7 @@ QualitySettings:
     textureQuality: 0
     anisotropicTextures: 2
     antiAliasing: 0
-<<<<<<< Updated upstream
     softParticles: 1
-=======
-    softParticles: 0
->>>>>>> Stashed changes
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
@@ -234,7 +230,6 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     PS5: 5
-    Server: 0
     Stadia: 5
     Standalone: 5
     WebGL: 3
