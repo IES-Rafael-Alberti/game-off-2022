@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Event")) {
             lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
-            lastEvent.EventOnTrigger(this);
+            lastEvent.EventOnEnter(this);
         } 
     }
 
