@@ -20,18 +20,19 @@
 
 title: Baker's Bizarre Adventure
 email: babushastudio@gmail.com
-description: We post here information about our game >- # this means to ignore newlines until "baseurl:"
-  
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "/game-off-2022" # the subpath of your site, e.g. /blog
 url: "https://ies-rafael-alberti.github.io/game-off-2022/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: BabushaStudio 
 
 # Build settings
-remote_theme: minima
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme 
-  
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
