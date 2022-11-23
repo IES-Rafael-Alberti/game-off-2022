@@ -8,7 +8,7 @@ public class TextPopUp : MonoBehaviour
     public Font font;
     public Color color = Color.white;
     public int fontSize = 18;
-    public float alpha = 0.8f;
+    public float alpha = 0.9f;
     public string text = "Placeholder";
     public Texture2D background;
     public Rect rect = new Rect(0, 0, 100, 50); //posX , posY, TextWidth, TextHeight
