@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Event")) {
             lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            if (lastEvent.enabled)
             lastEvent.EventOnEnter(this);
         } 
     }
@@ -72,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Interact"))
         {
             if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            if (lastEvent.enabled)
             lastEvent.EventOnStay(this);
         }
         

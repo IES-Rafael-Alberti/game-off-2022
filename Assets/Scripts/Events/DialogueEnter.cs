@@ -12,5 +12,6 @@ public class DialogueEnter : DefaultEvent
     public override void EventOnEnter(PlayerMovement player) {
         player.StopInput();
         dialogue.StartDialogue();
+        enabled = false;
     }
 }
