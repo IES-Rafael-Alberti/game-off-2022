@@ -10,6 +10,12 @@ public class EnemyHealth : MonoBehaviour
     public void RecieveDamage(float damage)
     {
         health -= damage;
-        if (health <= 0) gameObject.SetActive(false);
+        if (health <= 0) StartCoroutine(DeathAnimation());
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        yield return new WaitForSeconds(gameOverMargin);
+        gameObject.SetActive(false);
     }
 }
