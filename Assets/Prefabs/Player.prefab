@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpForce: 17
-  jumpMargin: 5
+  jumpMargin: 100
   jumps: 2
   initialJumps: 0
 --- !u!114 &7641074622773595633
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingMargin: 0.1
-  fallingMargin: 0.1
+  fallingMargin: 0.3
 --- !u!95 &1912520058386832774
 Animator:
   serializedVersion: 4
