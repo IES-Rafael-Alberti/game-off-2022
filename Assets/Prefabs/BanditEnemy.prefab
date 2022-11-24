@@ -47,8 +47,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45686466, y: -0.000000020043311}
-  m_Size: {x: 1.5960052, y: 0.40000305}
+  m_Offset: {x: 0.35226503, y: -0.000000032512553}
+  m_Size: {x: 1.3868071, y: 0.40000346}
   m_Direction: 1
 --- !u!95 &3629122629883840928
 Animator:
@@ -270,7 +270,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3629122630529012944}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6b0378e31539d0c45ae3ff08f5c2b68f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -293,9 +293,9 @@ MonoBehaviour:
   endPosition: {x: -10, y: 0, z: 0}
   attackHitBox: {fileID: 3629122629883840943}
   lookingAt: {x: -1, y: 0}
-  cooldown: 1.5
+  cooldown: 1
   offset: {x: 0, y: 0.475}
-  range: 1
+  range: 0.5
   animationSeconds: 1.5
 --- !u!114 &3629122630529012947
 MonoBehaviour:
