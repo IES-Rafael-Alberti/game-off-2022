@@ -6,12 +6,12 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    private CinemachineVirtualCamera camera;
+    private CinemachineVirtualCamera virtualCam;
 
     public void SearchCamera()
     {
-        camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-        camera.Follow = transform;
+        virtualCam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+        virtualCam.Follow = transform;
     }
 
 }

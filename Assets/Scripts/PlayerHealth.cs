@@ -7,10 +7,10 @@ public class PlayerHealth : MonoBehaviour
    
 {
     public float health;
-    public float gameOverMargin = 5f;
-    public float loadingScreenTime = 1f;
+    public float gameOverAnimation = 1f;
+    public float gameOverScreenTimer = 1f;
     public GameObject gameOverCanvas;
-    public Animator loadScreen;
+    public LoadManager loadManager;
 
     private float initialHealth;
     private PlayerMovement playerMovement;
@@ -31,7 +31,6 @@ public class PlayerHealth : MonoBehaviour
     }
     public void RecieveDamage(float damage)
     {
-        Debug.Log("Damage ="+ damage);
         health -= damage;
         if (health <= 0) {
             health = 0;
@@ -41,27 +40,12 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(gameOverMargin);
+        yield return new WaitForSeconds(gameOverAnimation);
         gameOverCanvas.gameObject.SetActive(true);
-        yield return new WaitForSeconds(loadingScreenTime);
+        yield return new WaitForSeconds(gameOverScreenTimer);
         gameOverCanvas.gameObject.SetActive(false);
-        loadScreen.gameObject.SetActive(true);
-        AsyncOperation load = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        while (!load.isDone)
-        {
-            yield return null;
-        }
-        loadScreen.SetBool("Load", true);
         health = initialHealth;
-        gameObject.SetActive(true);
         playerMovement.ReceiveInput();
-        StartCoroutine(LoadNewScene());
-    }
-
-    IEnumerator LoadNewScene()
-    {
-        yield return new WaitForSeconds(loadingScreenTime);
-        playerMovement.GetComponent<CameraFollow>().SearchCamera();
-        loadScreen.gameObject.SetActive(false);
+        loadManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
