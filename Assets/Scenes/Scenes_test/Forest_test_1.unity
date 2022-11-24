@@ -323,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8d2c16c4980dd43ae2b82eb1c92ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadManager: {fileID: 244814359}
   sceneName: 
   newRespawn: {x: 0, y: -5, z: 0}
 --- !u!1 &109880431
@@ -4203,7 +4202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadScreen: {fileID: 181219264}
   minLoadingTime: 0.75
-  newSceneTimer: 1.55
+  newSceneTimer: 1
+  loadingScreenTimer: 0.3
   playerCamera: {fileID: 1785633205}
 --- !u!114 &244814360
 MonoBehaviour:
@@ -42467,7 +42467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3294792, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3281994, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
