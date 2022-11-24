@@ -18339,6 +18339,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7126980006577202994, guid: 3d173400cea98b94ca30da44454ba69e, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126980006577202994, guid: 3d173400cea98b94ca30da44454ba69e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7126980007337391634, guid: 3d173400cea98b94ca30da44454ba69e, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -18948,6 +18956,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7744510124680779698, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy
@@ -28790,7 +28802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7744510126104586559, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_Mass
-      value: 999
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
