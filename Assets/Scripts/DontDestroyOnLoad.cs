@@ -5,7 +5,7 @@ using UnityEngine;
 public class DontDestroyOnLoad : MonoBehaviour
 {
     private List<GameObject> objs = new List<GameObject>();
-    private Vector3 respawn;
+    public Vector3 respawn = Vector3.zero;
     private void Awake()
     {
         {
