@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenes_test/Forest_test_1.unity
     guid: dd22af36905951a429b34f3cc81a4e37
   - enabled: 1
-    path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Scenes_test/Castle.unity
+    guid: 2d8e285c054ac3746abb54722f5a7b99
+  - enabled: 1
+    path: Assets/Scenes/Scenes_test/Ruins.unity
+    guid: e9f9054403dbf0746b9b39642efdc78e
+  - enabled: 1
+    path: Assets/Scenes/Scenes_test/Village_test_1.unity
+    guid: 107981dbfe1359a4987781cc3b1a9b2b
   m_configObjects: {}
