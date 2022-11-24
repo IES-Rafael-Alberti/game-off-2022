@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public GameObject attackHitBox;
     public float animationTime;
+    public float cooldown = 0.01f;
 
     private PlayerMovement player;
     private bool isAttacking = false;
@@ -20,16 +21,18 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && !isAttacking && player.CanMove())
         {
-            isAttacking = true;
+
             StartCoroutine(Attack());
         }
     }
 
     IEnumerator Attack()
     {
+        isAttacking = true;
         attackHitBox.SetActive(true);
         yield return new WaitForSeconds(animationTime);
-        isAttacking = false;
         attackHitBox.SetActive(false);
+        yield return new WaitForSeconds(cooldown);
+        isAttacking = false;
     }
 }
