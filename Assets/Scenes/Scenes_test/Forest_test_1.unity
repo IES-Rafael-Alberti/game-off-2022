@@ -4457,13 +4457,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3629122629883840931, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3868071
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122629883840931, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.40000346
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122629883840931, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.35226503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122629883840931, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.000000032512553
+      objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012944, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_Name
       value: BanditEnemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012946, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: range
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122630529012946, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122630529012946, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: endPosition.x
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122630529012948, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Mass
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629122630529012949, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6b0378e31539d0c45ae3ff08f5c2b68f, type: 2}
+    - target: {fileID: 3629122630529012949, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_RootOrder
@@ -4475,7 +4511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8683763
+      value: -3.96
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41328,6 +41364,10 @@ PrefabInstance:
     - target: {fileID: 351316250, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: gameOverMargin
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337667332331717675, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7944809573089530085, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: m_Name
