@@ -11,8 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float gameOverScreenTimer = 1f;
     public GameObject gameOverCanvas;
     public LoadManager loadManager;
-
-    private float initialHealth;
+    public float initialHealth;
     private PlayerMovement playerMovement;
 
     private void Start()
@@ -44,8 +43,6 @@ public class PlayerHealth : MonoBehaviour
         gameOverCanvas.gameObject.SetActive(true);
         yield return new WaitForSeconds(gameOverScreenTimer);
         gameOverCanvas.gameObject.SetActive(false);
-        health = initialHealth;
-        playerMovement.ReceiveInput();
         loadManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
