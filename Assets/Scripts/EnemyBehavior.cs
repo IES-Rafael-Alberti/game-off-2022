@@ -15,7 +15,6 @@ public class EnemyBehavior : MonoBehaviour
     public Vector2 offset = new Vector2(-0, -0);
     public float range = 1;
     public float animationSeconds = 1;
-    public bool flip = true;
 
     private Vector3 startPosition;
     private bool goingLeft = true;
@@ -33,18 +32,12 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
         MoveEnemy();
-
-        // Negative Scale for flipping enemyç
-        if (flip)
-        {
-            if (physics.velocity.x > 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else if (physics.velocity.x < 0)
-            {
-                transform.localScale = Vector3.one;
-            }
+        
+        // Negative Scale for flipping enemy
+        if (physics.velocity.x > 0) {
+            transform.localScale = new Vector3(-1, 1, 1) ;
+        } else if (physics.velocity.x < 0) { 
+            transform.localScale = Vector3.one;
         }
 
         //animator.SetBool("isAttacking", isAttacking);
