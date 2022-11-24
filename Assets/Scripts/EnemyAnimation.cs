@@ -22,6 +22,7 @@ public class EnemyAnimation : MonoBehaviour
     void Update()
     {
         properties.SetBool("isMoving", Mathf.Abs(rb.velocity.x) > movingMargin);
+        properties.SetBool("isHit", enemyHealth.isHit);
         properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
         properties.SetBool("isDead", enemyHealth.health <= 0);
     }
