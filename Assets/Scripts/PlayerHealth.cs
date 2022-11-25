@@ -9,10 +9,13 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float gameOverAnimation = 1f;
     public float gameOverScreenTimer = 1f;
+    public bool isHit = false;
     public GameObject gameOverCanvas;
     public LoadManager loadManager;
     public float initialHealth;
+    public float hitAnimationSeconds = 1f; 
     
+    private PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -39,6 +42,14 @@ public class PlayerHealth : MonoBehaviour
             if (health > initialHealth) health = initialHealth;
         }
     }
+
+    IEnumerator HitAnimation()
+    {
+        isHit = true;
+        yield return new WaitForSeconds(hitAnimationSeconds);
+        isHit = false;
+    }
+
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(gameOverAnimation);

@@ -27,6 +27,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         properties.SetBool("isMoving",Mathf.Abs(rb.velocity.x)>movingMargin);
         properties.SetBool("isFalling", pm.jumps < pm.initialJumps);
+        properties.SetBool("isHit", playerHealth.isHit);
         properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
         properties.SetBool("isDead", playerHealth.health <= 0);
     }
