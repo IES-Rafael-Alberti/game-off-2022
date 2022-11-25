@@ -48223,6 +48223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+--- !u!1 &199266522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6666403658226759203, guid: 1ad56434d8ad425479ad60d84f7bce6a, type: 3}
+  m_PrefabInstance: {fileID: 6666403659747039648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &217007998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48442,6 +48447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   gameOverMargin: 5
+  hitAnimationSeconds: 0.5
+  isHit: 0
 --- !u!114 &279177608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66094,11 +66101,6 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2048213961823272354, guid: 27277137d0605bd45bd741cdb791e0c1, type: 3}
   m_PrefabInstance: {fileID: 1163819946}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &785492775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5991068995059562934, guid: 38f4212f557669940a9c6258ade43854, type: 3}
-  m_PrefabInstance: {fileID: 5991068995500905105}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &855751441 stripped
 Transform:
@@ -88188,6 +88190,6 @@ PrefabInstance:
     - target: {fileID: 6666403659650915590, guid: 1ad56434d8ad425479ad60d84f7bce6a, type: 3}
       propertyPath: attackHitBox
       value: 
-      objectReference: {fileID: 785492775}
+      objectReference: {fileID: 199266522}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad56434d8ad425479ad60d84f7bce6a, type: 3}
