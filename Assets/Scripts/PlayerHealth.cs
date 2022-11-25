@@ -20,7 +20,6 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         initialHealth = health;
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,15 +32,15 @@ public class PlayerHealth : MonoBehaviour
     }
     public void RecieveDamage(float damage)
     {
-        health -= damage;
-        Debug.Log("Hola");
-        StartCoroutine(HitAnimation());
-        if (health <= 0) {
-            health = 0;
-            StartCoroutine(GameOver());
+        if (health > 0){
+            health -= damage;
+            if (health <= 0)
+            {
+                health = 0;
+                StartCoroutine(GameOver());
+            }
+            if (health > initialHealth) health = initialHealth;
         }
-        
-        if (health > initialHealth) health = initialHealth;
     }
 
     IEnumerator HitAnimation()

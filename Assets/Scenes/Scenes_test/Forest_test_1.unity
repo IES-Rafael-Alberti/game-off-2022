@@ -4202,7 +4202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadScreen: {fileID: 181219264}
   minLoadingTime: 0.75
-  newSceneTimer: 1.55
+  newSceneTimer: 1
+  loadingScreenTimer: 0.3
   playerCamera: {fileID: 1785633205}
 --- !u!114 &244814360
 MonoBehaviour:
