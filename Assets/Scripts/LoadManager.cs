@@ -8,6 +8,7 @@ public class LoadManager : MonoBehaviour
     public Animator loadScreen;
     public float minLoadingTime = 0.75f;
     public float newSceneTimer = 1f;
+    public float loadingScreenTimer = 0.3f;
     public CameraFollow playerCamera;
 
     private GameObject player;
@@ -34,6 +35,7 @@ public class LoadManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().ReceiveInput();
         playerCamera.gameObject.transform.position = playerCamera.gameObject.GetComponent<DontDestroyOnLoad>().respawn;
         playerCamera.SearchCamera();
+        yield return new WaitForSeconds(loadingScreenTimer);
         loadScreen.gameObject.SetActive(false);
     }
 }
