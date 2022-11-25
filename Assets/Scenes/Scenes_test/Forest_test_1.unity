@@ -4562,7 +4562,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
       propertyPath: title
-      value: Boy
+      value: Hansel
       objectReference: {fileID: 0}
     - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
       propertyPath: dialogueController
@@ -4574,12 +4574,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "He perdido a mi hermana en el bosque, una anciana le ofreci\xF3 golosinas
-        si la acompa\xF1aba a su casa."
+      value: I have lost my sister in the woods, an old woman offered her sweets
+        if she would go home with her.
       objectReference: {fileID: 0}
     - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "\xA1Quiero volver con mi mam\xE1!."
+      value: ' I want to go back to my mum!'
       objectReference: {fileID: 0}
     - target: {fileID: 423007785402248208, guid: b7393fbe7df82924f892c4a0b6907647, type: 3}
       propertyPath: dialogueList.Array.data[2]
@@ -42821,7 +42821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.656786, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -1.1529408, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
