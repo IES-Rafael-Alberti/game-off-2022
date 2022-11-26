@@ -48,8 +48,9 @@ public class PlayerMovement : MonoBehaviour
             else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
         }
         else
-        {
-            physics.velocity = Vector2.zero;
+        { 
+            if (playerHealth.health <= 0) physics.velocity = Vector2.zero;
+            else physics.velocity = new Vector2(0, physics.velocity.y);
         }
     }
 
