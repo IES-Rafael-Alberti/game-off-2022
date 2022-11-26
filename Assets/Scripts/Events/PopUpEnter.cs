@@ -5,7 +5,8 @@ using UnityEngine;
 public class PopUpEnter : DefaultEvent
 {
     public float popUpDuration;
-    private TextPopUp popUp;
+    public TextPopUp popUp;
+    public bool isDialoguePopUp = false;
     private void Start()
     {
         popUp = GetComponent<TextPopUp>();
@@ -18,6 +19,6 @@ public class PopUpEnter : DefaultEvent
     {
         popUp.enabled = true;
         yield return new WaitForSeconds(popUpDuration);
-        popUp.enabled = false;
+        if (!isDialoguePopUp) popUp.enabled = false;
     }
 }
