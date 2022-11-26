@@ -124,9 +124,11 @@ MonoBehaviour:
   health: 5
   gameOverAnimation: 1
   gameOverScreenTimer: 1
+  isHit: 0
   gameOverCanvas: {fileID: 0}
   loadManager: {fileID: 0}
   initialHealth: 0
+  hitAnimationSeconds: 0.5
 --- !u!114 &1785633201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff86210a62b8a045af7dfe8b6e3a980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingMargin: 0.1
-  fallingMargin: 0.3
+  movingMargin: 1
+  fallingMargin: 1
 --- !u!95 &1912520058386832774
 Animator:
   serializedVersion: 4
