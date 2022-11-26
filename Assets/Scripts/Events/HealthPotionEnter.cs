@@ -9,7 +9,6 @@ public class HealthPotionEnter : DefaultEvent
 
     public override void EventOnEnter(PlayerMovement player)
     {
-        Debug.Log("hola");
         player.gameObject.GetComponent<PlayerHealth>().RecieveDamage(damage);
         gameObject.SetActive(false);
     }

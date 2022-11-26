@@ -15,10 +15,15 @@ public class PopUpEnter : DefaultEvent
     {
         if (!popUp.enabled) StartCoroutine(PopMeUp());
     }
+    public override void EventOnExit(PlayerMovement player)
+    {
+        if(isDialoguePopUp) popUp.enabled = false;
+    }
     private IEnumerator PopMeUp()
     {
         popUp.enabled = true;
         yield return new WaitForSeconds(popUpDuration);
         if (!isDialoguePopUp) popUp.enabled = false;
     }
+
 }

@@ -71,8 +71,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButton("Interact"))
         {
+            if (collision.CompareTag("Event"))
+            {
+                events = collision.gameObject.GetComponents<DefaultEvent>();
+                foreach (DefaultEvent lastEvent in events) if (lastEvent.enabled) lastEvent.EventOnStay(this);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Event"))
+        {
             events = collision.gameObject.GetComponents<DefaultEvent>();
-            foreach (DefaultEvent lastEvent in events) if (lastEvent.enabled) lastEvent.EventOnStay(this);
+            foreach (DefaultEvent lastEvent in events) if (lastEvent.enabled) lastEvent.EventOnExit(this);
         }
     }
 

@@ -10,4 +10,6 @@ public class DefaultEvent : MonoBehaviour, IEvent
 
     public virtual void EventOnEnter(PlayerMovement player) {}
 
+    public virtual void EventOnExit(PlayerMovement player) { }
+
 }
