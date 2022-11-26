@@ -44012,6 +44012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasEffect: {fileID: 1495168779}
+  trippingTime: 3
 --- !u!114 &1075116989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44024,20 +44025,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f45d56d5750c340b78336dd6da0e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font: {fileID: 0}
+  font: {fileID: 12800000, guid: de53cdd698c9d3349b5208d0dd9c039c, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  fontSize: 18
+  fontSize: 48
   alpha: 0.9
-  text: Placeholder
-  background: {fileID: 0}
+  text: E
+  background: {fileID: 2800000, guid: 9a6560e5bacb40847bb1b879ede354fb, type: 3}
   rect:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 100
-    height: 50
-  textOffset: {x: 0, y: 0, z: 0}
-  imageOffset: {x: 0, y: 0, z: 0}
+    width: 60
+    height: 60
+  textOffset: {x: -0.45, y: 1, z: 0}
+  imageOffset: {x: -0.45, y: 1, z: 0}
 --- !u!114 &1075116990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44050,7 +44051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc9e0fec0d31d9468b72ee133ed8f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpDuration: 0
+  popUpDuration: 1
+  popUp: {fileID: 0}
+  isDialoguePopUp: 1
 --- !u!61 &1075116991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45905,6 +45908,7 @@ GameObject:
   - component: {fileID: 1495168780}
   - component: {fileID: 1495168782}
   - component: {fileID: 1495168781}
+  - component: {fileID: 1495168783}
   m_Layer: 5
   m_Name: MushroomEffect
   m_TagString: Untagged
@@ -45945,7 +45949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.11764706}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -45970,6 +45974,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495168779}
   m_CullTransparentMesh: 1
+--- !u!95 &1495168783
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495168779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4719633901921a14d947f3be942cb33c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1518723755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6193377138299022203, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
