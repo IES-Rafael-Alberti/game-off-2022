@@ -6,5 +6,6 @@ public interface IEvent
 {
     void EventOnEnter(PlayerMovement player);
     void EventOnStay(PlayerMovement player);
+    void EventOnExit(PlayerMovement player);
 
 }
