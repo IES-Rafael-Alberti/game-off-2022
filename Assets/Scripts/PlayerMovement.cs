@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumps = 2;
     public int initialJumps;
 
-    private DefaultEvent lastEvent;
+    private DefaultEvent[] lastEvents;
     private PlayerHealth playerHealth; 
     private float inputX;
     private Rigidbody2D physics;
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Event")) {
-            lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            lastEvent = collision.gameObject.GetComponents<DefaultEvent>();
             if (lastEvent.enabled)
             lastEvent.EventOnEnter(this);
         } 
@@ -70,9 +70,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         if (Input.GetButton("Interact"))
         {
-            if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponent<DefaultEvent>();
+            if (collision.CompareTag("Event")) lastEvent = collision.gameObject.GetComponents<DefaultEvent>();
             if (lastEvent.enabled)
             lastEvent.EventOnStay(this);
         }
