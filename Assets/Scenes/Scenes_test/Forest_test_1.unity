@@ -42821,7 +42821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.201954, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3342838, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43186,6 +43186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpDuration: 2
+  popUp: {fileID: 0}
+  isDialoguePopUp: 0
 --- !u!61 &884771228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108575,18 +108577,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   font: {fileID: 12800000, guid: de53cdd698c9d3349b5208d0dd9c039c, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  fontSize: 18
+  fontSize: 48
   alpha: 0.9
-  text: erer
-  background: {fileID: 2800000, guid: 11277a3f23988ec47908362d708edaa8, type: 3}
+  text: E
+  background: {fileID: 2800000, guid: 9a6560e5bacb40847bb1b879ede354fb, type: 3}
   rect:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 50
-    height: 50
-  textOffset: {x: 0, y: 0, z: 0}
-  imageOffset: {x: 0, y: 0, z: 0}
+    width: 60
+    height: 60
+  textOffset: {x: -0.45, y: 1, z: 0}
+  imageOffset: {x: -0.45, y: 1, z: 0}
 --- !u!114 &1892316699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108600,6 +108602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpDuration: 2
+  popUp: {fileID: 0}
+  isDialoguePopUp: 1
 --- !u!1 &1925521327
 GameObject:
   m_ObjectHideFlags: 0
