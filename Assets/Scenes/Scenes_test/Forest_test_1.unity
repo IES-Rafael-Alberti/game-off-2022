@@ -4209,7 +4209,7 @@ MonoBehaviour:
   minLoadingTime: 0.75
   newSceneTimer: 1
   loadingScreenTimer: 0.3
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 1785633198}
 --- !u!114 &244814360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43022,7 +43022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4218407, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3361893, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108521,6 +108521,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f94e8bf0187b7040855d3fce2b35f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1785633198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1785633205, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+  m_PrefabInstance: {fileID: 425098546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab18333191a0dc40a4fc707c2a69579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1830336366
