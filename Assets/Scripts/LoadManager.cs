@@ -31,7 +31,7 @@ public class LoadManager : MonoBehaviour
         yield return new WaitForSeconds(newSceneTimer);
         player = playerCamera.gameObject;
         playerHp = player.GetComponent<PlayerHealth>();
-        playerHp.health = playerHp.initialHealth; //TODO: Refactor in a function
+        if (playerHp.health == 0) playerHp.health = playerHp.initialHealth;
         player.GetComponent<PlayerMovement>().ReceiveInput();
         playerCamera.gameObject.transform.position = playerCamera.gameObject.GetComponent<DontDestroyOnLoad>().respawn;
         playerCamera.SearchCamera();
