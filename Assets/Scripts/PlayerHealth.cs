@@ -26,8 +26,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if( collision.tag == "Death")
         {
-            health = 0;
-            StartCoroutine(GameOver());
+            if (health > 0)
+            {
+                health = 0;
+                StartCoroutine(GameOver());
+            }
         }
     }
     public void RecieveDamage(float damage)
