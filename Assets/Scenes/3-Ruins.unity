@@ -88787,6 +88787,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 4575989207974650245, guid: 183fc5464302ede468b931fcf5d4ad65, type: 3}
+      propertyPath: sceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575989207974650245, guid: 183fc5464302ede468b931fcf5d4ad65, type: 3}
+      propertyPath: newRespawn.x
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575989207974650245, guid: 183fc5464302ede468b931fcf5d4ad65, type: 3}
+      propertyPath: newRespawn.y
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575989207974650245, guid: 183fc5464302ede468b931fcf5d4ad65, type: 3}
+      propertyPath: newRespawn.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4575989207974650247, guid: 183fc5464302ede468b931fcf5d4ad65, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -88944,7 +88960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7871497795820221618, guid: 356b9334e5bdb4848b8a023f3ed02467, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -19
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 7871497795820221618, guid: 356b9334e5bdb4848b8a023f3ed02467, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
@@ -88972,7 +88988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7871497795820221618, guid: 356b9334e5bdb4848b8a023f3ed02467, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: 11.5
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 356b9334e5bdb4848b8a023f3ed02467, type: 3}
