@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   gameOverMargin: 1
-  hitAnimationSeconds: 0.5
+  hitAnimationSeconds: 0.25
   isHit: 0
 --- !u!1 &5991068994747339814
 GameObject:
