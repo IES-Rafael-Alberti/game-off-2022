@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
-    private List<GameObject> objs = new List<GameObject>();
     public Vector3 respawn = Vector3.zero;
+
+    private List<DontDestroyOnLoad> objs = new List<DontDestroyOnLoad>();
+    private float age = 0;
+    private void Update()
+    {
+        age += Time.deltaTime * 0.01f;
+    }
+
     private void Awake()
     {
+        foreach (DontDestroyOnLoad go in FindObjectsOfType(typeof(DontDestroyOnLoad)))
+        if (go.name == name) objs.Add(go);
+        if (objs.Count > 1)
         {
-            foreach (GameObject go in FindObjectsOfType(typeof(GameObject)))
-            if (go.name == name) objs.Add(go);
-            if (objs.Count > 1)
+            foreach (DontDestroyOnLoad go in objs)
             {
-                for (int i = 0; i < objs.Count; i++)
+                if (go.GetInstanceID() != GetInstanceID())
                 {
-                    if (i == 0) objs[i].transform.position = respawn;
-                    else Destroy(objs[i]);
+                    if (go.age > age) {
+                        Destroy(gameObject);
+                    }
                 }
+                else transform.position = respawn;
             }
-            DontDestroyOnLoad(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
     }
 }
