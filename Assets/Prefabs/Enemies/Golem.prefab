@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   gameOverMargin: 1.2
-  hitAnimationSeconds: 0.5
+  hitAnimationSeconds: 0.25
   isHit: 0
 --- !u!61 &5466228275146799539
 BoxCollider2D:

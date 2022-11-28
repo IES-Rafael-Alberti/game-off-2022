@@ -311,3 +311,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   gameOverMargin: 1.2
+  hitAnimationSeconds: 0.25
+  isHit: 0
