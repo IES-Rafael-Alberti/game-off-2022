@@ -14,13 +14,14 @@ public class AttackHitbox : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (CompareTag("PlayerHitbox")) if (collision.gameObject.CompareTag("Enemy"))
+        Debug.Log(collision.collider.gameObject.tag);
+        if (CompareTag("PlayerHitbox")) if (collision.gameObject.CompareTag("Enemy") && !collision.collider.gameObject.CompareTag("EnemyHitbox"))
             {
                 enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
                 if (hasHit) enemyHealth.RecieveDamage(damage);
                 hasHit = false;
             }
-        if (CompareTag("EnemyHitbox")) if (collision.gameObject.CompareTag("Player"))
+        if (CompareTag("EnemyHitbox")) if (collision.gameObject.CompareTag("Player") && !collision.collider.gameObject.CompareTag("PlayerHitbox"))
             {
                 playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
                 if (hasHit) playerHealth.RecieveDamage(damage);
