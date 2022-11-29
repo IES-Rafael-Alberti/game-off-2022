@@ -67,7 +67,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 5991068994306599022}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6b0378e31539d0c45ae3ff08f5c2b68f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  gameOverMargin: 5
-  hitAnimationSeconds: 0.5
+  gameOverMargin: 1
+  hitAnimationSeconds: 0.25
   isHit: 0
 --- !u!1 &5991068994747339814
 GameObject:
@@ -276,8 +276,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11187601, y: -0.027963996}
-  m_Size: {x: 1.6931238, y: 1.6931238}
+  m_Offset: {x: -0.1, y: 0.09089875}
+  m_Size: {x: 1.4241943, y: 1.4241943}
   m_Direction: 0
 --- !u!95 &5991068995059562937
 Animator:
