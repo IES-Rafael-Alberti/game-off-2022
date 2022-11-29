@@ -26,5 +26,15 @@ public class AttackHitbox : MonoBehaviour
                 if (hasHit) playerHealth.RecieveDamage(damage);
                 hasHit = false;
             }
+        if (CompareTag("EnemyProyectile")) if (collision.gameObject.CompareTag("Player"))
+            {
+                playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+                if (hasHit) playerHealth.RecieveDamage(damage);
+                hasHit = false;
+                Destroy(gameObject);
+            }
+            else { Destroy(gameObject); }
     }
+
+ 
 }

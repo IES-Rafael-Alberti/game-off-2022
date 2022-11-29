@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PrincessBehaviour : MonoBehaviour
 {
+
+    public float offsetProyectile = 2f;
     public float invulnerabilityTime = 2f;
     public bool isVulnerable = true;
 
@@ -26,6 +28,7 @@ public class PrincessBehaviour : MonoBehaviour
     public float attack2Cooldown = 3f;
     public float attack3Cooldown = 3f;
 
+    private Vector3 proyectileDirection;
     private Transform player;
     private Vector3 myTeleportPosition;
     private int lastTeleportIndex = -1;
@@ -33,6 +36,8 @@ public class PrincessBehaviour : MonoBehaviour
     private int teleportIndex = -1;
     private int randomAtack = 0;
     private EnemyHealth princessHealth;
+
+    [SerializeField] ProyectileBehaviour proyectilePrefab;
 
     void Start()
     {
@@ -43,7 +48,7 @@ public class PrincessBehaviour : MonoBehaviour
     }
     void Update()
     {
-
+        proyectileDirection = new Vector3(player.position.x - transform.position.x, player.position.y - transform.position.y, 0).normalized;
         transform.localScale = new Vector3(Mathf.Sign(player.position.x - transform.position.x), 1, 1);
 
         if (available)
@@ -94,31 +99,42 @@ public class PrincessBehaviour : MonoBehaviour
     }
     IEnumerator Attack1()
     {
-        //Available 7-3 hp
         isAttack1 = true;
-        //Debug.Log("ataque 1");
+        Debug.Log("ataque 1");
         yield return new WaitForSeconds(attack1Cooldown);
         if (isAttack1)
-        isAttack1 = false;
-        available = true;
+        {
+            isAttack1 = false;
+            available = true;
+            ProyectileBehaviour proyectile = Instantiate(proyectilePrefab, new Vector3(transform.localScale.x * offsetProyectile + transform.position.x, transform.position.y, 0), new Quaternion(), gameObject.transform);
+            if (proyectileDirection.x > 0) {
+                proyectile.transform.localScale = new Vector3(-proyectile.transform.localScale.x, transform.localScale.y, 1);
+            }
+            proyectile.direction = proyectileDirection;
+        }
+        
     }
     IEnumerator Attack3()
     {
-        //Available 5-0 hp
         isAttack3 = true;
-        //Debug.Log("ataque 3");
+        Debug.Log("ataque 3");
         yield return new WaitForSeconds(attack3Cooldown);
-        isAttack3 = false;
-        available = true;
+        if (isAttack3)
+        {
+            isAttack3 = false;
+            available = true;
+        }
     }
     IEnumerator Attack2()
     {
-        //Available 3-0 hp
         isAttack2 = true;
-        //Debug.Log("ataque 2");
+        Debug.Log("ataque 2");
         yield return new WaitForSeconds(attack2Cooldown);
-        isAttack2 = false;
-        available = true;
+        if (isAttack2)
+        {
+            isAttack2 = false;
+            available = true;
+        }
     }
 
     IEnumerator Teleport()

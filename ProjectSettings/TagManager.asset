@@ -10,6 +10,7 @@ TagManager:
   - PlayerHitbox
   - EnemyHitbox
   - Event
+  - EnemyProyectile
   layers:
   - Default
   - TransparentFX
