@@ -26,18 +26,26 @@ public class PrincessBehaviour : MonoBehaviour
     public float attack2Cooldown = 3f;
     public float attack3Cooldown = 3f;
 
+    private Transform player;
     private Vector3 myTeleportPosition;
-    private int teleportIndex = 0;
+    private int lastTeleportIndex = -1;
+    private float initialHeatlth;
+    private int teleportIndex = -1;
     private int randomAtack = 0;
     private EnemyHealth princessHealth;
 
     void Start()
     {
+        player = GameObject.Find("Player").transform;
         princessHealth = GetComponent<EnemyHealth>();
         myTeleportPosition = transform.position;
+        initialHeatlth = princessHealth.health;
     }
     void Update()
     {
+
+        transform.localScale = new Vector3(Mathf.Sign(player.position.x - transform.position.x), 1, 1);
+
         if (available)
         {
             if (!isTeleporting) {
@@ -88,7 +96,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         //Available 7-3 hp
         isAttack1 = true;
-        Debug.Log("ataque 1");
+        //Debug.Log("ataque 1");
         yield return new WaitForSeconds(attack1Cooldown);
         if (isAttack1)
         isAttack1 = false;
@@ -98,7 +106,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         //Available 5-0 hp
         isAttack3 = true;
-        Debug.Log("ataque 3");
+        //Debug.Log("ataque 3");
         yield return new WaitForSeconds(attack3Cooldown);
         isAttack3 = false;
         available = true;
@@ -107,7 +115,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         //Available 3-0 hp
         isAttack2 = true;
-        Debug.Log("ataque 2");
+        //Debug.Log("ataque 2");
         yield return new WaitForSeconds(attack2Cooldown);
         isAttack2 = false;
         available = true;
@@ -121,20 +129,22 @@ public class PrincessBehaviour : MonoBehaviour
         available = false;
         isTeleporting = true;
 
-        teleportIndex = Random.Range(0, 8 -Mathf.FloorToInt(princessHealth.health));
-        while (myTeleportPosition == teleportPositions[teleportIndex].position)
+        int tempTeleportIndex;
+        do
         {
-            teleportIndex = Random.Range(0, 8 - Mathf.FloorToInt(princessHealth.health));
-            
-        }
-        if (princessHealth.health == 1) teleportIndex = 7;
-        myTeleportPosition = teleportPositions[teleportIndex].position;
+            tempTeleportIndex = Random.Range(0, Mathf.FloorToInt(initialHeatlth) - Mathf.FloorToInt(princessHealth.health));
+        } while (tempTeleportIndex == teleportIndex || tempTeleportIndex == lastTeleportIndex);
 
+        lastTeleportIndex = teleportIndex;
+        teleportIndex = tempTeleportIndex;
+        myTeleportPosition = teleportPositions[teleportIndex].position;
+        teleportPositions[teleportIndex].gameObject.SetActive(true);
         yield return new WaitForSeconds(teleportAnimationTimer);
         transform.position = myTeleportPosition;
+        isTeleporting = false;
+        teleportPositions[teleportIndex].gameObject.SetActive(false);
         yield return new WaitForSeconds(teleportAnimationTimer);
         available = true;
-        isTeleporting = false;
     }
     IEnumerator SetVulnerable() {
         isVulnerable = false;
