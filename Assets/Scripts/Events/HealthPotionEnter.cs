@@ -5,11 +5,11 @@ using UnityEngine;
 public class HealthPotionEnter : DefaultEvent
 {
 
-    public float damage = -1;
+    public float healAmount = 1;
 
     public override void EventOnEnter(PlayerMovement player)
     {
-        player.gameObject.GetComponent<PlayerHealth>().RecieveDamage(damage);
+        player.gameObject.GetComponent<PlayerHealth>().RecoverHealth(healAmount);
         gameObject.SetActive(false);
     }
 }
