@@ -526,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0495872, y: -0.5, z: -12}
+  m_LocalPosition: {x: 0.22136688, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15756,17 +15756,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39, y: 0.35}
   m_EdgeRadius: 0
---- !u!114 &331382780 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 421367844478869490, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
-  m_PrefabInstance: {fileID: 1202458360}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &331583738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16607,10 +16596,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1967053559}
-    - target: {fileID: 4522136068438354558, guid: 01f77e224fbef10489d8ceef261aed3e, type: 3}
-      propertyPath: nextButton
-      value: 
-      objectReference: {fileID: 331382780}
     - target: {fileID: 4522136068438354558, guid: 01f77e224fbef10489d8ceef261aed3e, type: 3}
       propertyPath: dialogueSet
       value: 
@@ -17577,7 +17562,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToFollow: {fileID: 92690565}
   paralaxRatio: 0.4
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &980646461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18611,6 +18595,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 441012116}
+    - target: {fileID: 421367844478869490, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueDialogue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
 --- !u!95 &1202458361 stripped
@@ -27438,7 +27426,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToFollow: {fileID: 92690565}
   paralaxRatio: 0.8
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1629277786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8350007207273465619, guid: efaca59275f67b44a9b014503a6e56ff, type: 3}
