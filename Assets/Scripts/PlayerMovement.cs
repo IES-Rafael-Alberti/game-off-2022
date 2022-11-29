@@ -69,13 +69,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetButton("Interact"))
+        if (Input.GetButton("Interact") && collision.CompareTag("Event"))
         {
-            if (collision.CompareTag("Event"))
-            {
                 events = collision.gameObject.GetComponents<DefaultEvent>();
                 foreach (DefaultEvent lastEvent in events) if (lastEvent.enabled) lastEvent.EventOnStay(this);
-            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
