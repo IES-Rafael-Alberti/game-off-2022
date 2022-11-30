@@ -6,6 +6,12 @@ public class PlayerAnimation : MonoBehaviour
 {
     public float movingMargin = 0.1f;
     public float fallingMargin = 0.1f;
+    public AudioClip deadsound;
+    public AudioClip hitsound;
+    public AudioClip attacksound;
+    public AudioClip jumpsound;
+    AudioSource audioPlayer;
+
 
     private PlayerMovement pm;
     private Rigidbody2D rb;
@@ -20,6 +26,7 @@ public class PlayerAnimation : MonoBehaviour
         properties = GetComponent<Animator>();
         combatController = transform.parent.GetComponent<PlayerCombat>();
         playerHealth = transform.parent.GetComponent<PlayerHealth>();
+        audioPlayer = this.GetComponent<AudioSource>();
     }
 
     
@@ -30,5 +37,27 @@ public class PlayerAnimation : MonoBehaviour
         properties.SetBool("isHit", playerHealth.isHit);
         properties.SetBool("isAttacking", combatController.attackHitBox.gameObject.activeSelf);
         properties.SetBool("isDead", playerHealth.health <= 0);
+
+        if (properties.GetBool("isDead"))
+            audioPlayer.clip = deadsound;
+        else if (properties.GetBool("isHit"))
+            audioPlayer.clip = hitsound;
+        else if (properties.GetBool("isAttacking"))
+            audioPlayer.clip = attacksound;
+        else if (properties.GetBool("isFalling"))
+           audioPlayer.clip = jumpsound;
     }
+
+    //private void LateUpdate()
+    //{
+    //    if (properties.GetBool("isDead"))
+    //    {
+    //        audioPlayer.clip = deadsound;
+    //        audioPlayer.Play();
+    //    }
+    //    else if (properties.GetBool("isHit")) { }
+    //    else if (properties.GetBool("isAttacking")) { }
+    //                else if (properties.GetBool("isFalling")) { }
+        
+    //}
 }
