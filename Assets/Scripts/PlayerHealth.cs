@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health > 0){
             health -= damage;
+            StartCoroutine(HitAnimation());
             if (health <= 0)
             {
                 health = 0;
@@ -46,6 +47,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void RecoverHealth(float healAmount)
+    {
+        health += healAmount;
+        if (health > initialHealth) health = initialHealth;
+    }
     IEnumerator HitAnimation()
     {
         isHit = true;
