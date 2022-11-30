@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PrincessTransformEnter : DefaultEvent
 {
+    public AudioClip bossMusic;
+    public AudioSource bgMusic;
     public PrincessBehaviour princess;
     public GameObject gate;
 
@@ -16,7 +18,8 @@ public class PrincessTransformEnter : DefaultEvent
     }
     IEnumerator TransformPrincess(PlayerMovement player)
     {
-
+        bgMusic.clip = bossMusic;
+        bgMusic.Play();
         virtualCam = GameObject.Find("CM vcam1");
         virtualCam.SetActive(false);
         gate.SetActive(true);
