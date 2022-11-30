@@ -10,7 +10,6 @@ public class PrincessBehaviour : MonoBehaviour
     public float deathAnimation1Time = 0.1f;
     public float deathAnimation2Time = 2f;
 
-    public float invulnerabilityTime = 2f;
     public bool isVulnerable = true;
 
     public bool isTransformed = false;
@@ -91,7 +90,6 @@ public class PrincessBehaviour : MonoBehaviour
         if (isVulnerable && princessHealth.health != 1) {
             princessHealth.RecieveDamage(1);
             StartCoroutine(Teleport());
-            StartCoroutine(SetVulnerable());
         } else 
         if (isVulnerable)
             {
@@ -193,15 +191,12 @@ public class PrincessBehaviour : MonoBehaviour
 
     IEnumerator Teleport()
     {
+        isVulnerable = false;
         isAttack1 = false;
         isAttack2 = false;
         isAttack3 = false;
         available = false;
-        StopCoroutine(Attack1());
-        StopCoroutine(Attack2());
-        StopCoroutine(Attack3());
         isTeleporting = true;
-
         int tempTeleportIndex;
         do
         {
@@ -222,10 +217,7 @@ public class PrincessBehaviour : MonoBehaviour
         teleportPositions[teleportIndex].gameObject.SetActive(false);
         yield return new WaitForSeconds(teleportAnimationTimer);
         available = true;
-    }
-    IEnumerator SetVulnerable() {
-        isVulnerable = false;
-        yield return new WaitForSeconds(invulnerabilityTime);
         isVulnerable = true;
+        StopAllCoroutines();
     }
 }
