@@ -197,6 +197,9 @@ public class PrincessBehaviour : MonoBehaviour
         isAttack2 = false;
         isAttack3 = false;
         available = false;
+        StopCoroutine(Attack1());
+        StopCoroutine(Attack2());
+        StopCoroutine(Attack3());
         isTeleporting = true;
 
         int tempTeleportIndex;
