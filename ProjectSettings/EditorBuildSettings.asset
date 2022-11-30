@@ -24,11 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/4A-Castle.unity
     guid: 2d8e285c054ac3746abb54722f5a7b99
   - enabled: 1
-    path: Assets/Scenes/4-BTreasureRoom.unity
-    guid: 7876e90c5403fac40b18799326e18475
-  - enabled: 1
     path: Assets/Scenes/5-EndScene.unity
     guid: ee461a9ae5225a742b59943b13d259f2
+  - enabled: 1
+    path: Assets/Scenes/4-BTreasureRoom.unity
+    guid: 7876e90c5403fac40b18799326e18475
   - enabled: 1
     path: Assets/Scenes/5B-HiddenEndScene.unity
     guid: 621653ce03d78fe49b6f5abdb87d4dd0
