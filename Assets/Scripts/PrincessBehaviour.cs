@@ -92,7 +92,7 @@ public class PrincessBehaviour : MonoBehaviour
             princessHealth.RecieveDamage(1);
             StartCoroutine(Teleport());
             StartCoroutine(SetVulnerable());
-        } else {
+        } else 
         if (isVulnerable)
             {
                 isVulnerable = false;
@@ -103,7 +103,6 @@ public class PrincessBehaviour : MonoBehaviour
                 isDead = true;
                 StartCoroutine(PrincessDeath());
             }
-        }
     }
 
     IEnumerator PrincessDeath()

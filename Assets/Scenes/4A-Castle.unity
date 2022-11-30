@@ -8734,10 +8734,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8938698344056887321, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
-      propertyPath: m_TagString
-      value: PlayerHitbox
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
 --- !u!114 &205423280 stripped
@@ -8932,7 +8928,7 @@ MonoBehaviour:
   offsetProyectile: 1.5
   attack1AnimationTimer: 1
   attack2AnimationTimer: 1
-  attack3AnimationTimer: 2
+  attack3AnimationTimer: 1
   attack1Cooldown: 1
   attack2Cooldown: 4
   attack3Cooldown: 8
@@ -9208,6 +9204,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 16.97944}
   m_EdgeRadius: 0
+--- !u!114 &574887478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 421367844478869490, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
+  m_PrefabInstance: {fileID: 1400337099}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &579436911
 GameObject:
   m_ObjectHideFlags: 0
@@ -17421,7 +17428,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: -1512391078, guid: 722e294e8fc6f03408807c1ee7878b76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -29205,7 +29212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008475368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9965744, y: 1, z: -11}
+  m_LocalPosition: {x: 1.9990387, y: 1, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29328,6 +29335,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 205423280}
+    - target: {fileID: 4522136068438354558, guid: 01f77e224fbef10489d8ceef261aed3e, type: 3}
+      propertyPath: nextButton
+      value: 
+      objectReference: {fileID: 574887478}
     - target: {fileID: 4522136068438354558, guid: 01f77e224fbef10489d8ceef261aed3e, type: 3}
       propertyPath: dialogueSet
       value: 

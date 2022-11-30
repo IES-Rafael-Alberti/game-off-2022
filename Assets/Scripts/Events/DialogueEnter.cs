@@ -13,6 +13,5 @@ public class DialogueEnter : DefaultEvent
         player.StopInput();
         enabled = false;
         dialogue.StartDialogue();
-
     }
 }
