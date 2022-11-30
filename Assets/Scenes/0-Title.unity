@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 267612945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93518536d0e945d448eceb83f1ffeea7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3043d724d74733f4f981a117fb1d89fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &267612947
@@ -658,7 +658,6 @@ GameObject:
   - component: {fileID: 1047160713}
   - component: {fileID: 1047160712}
   - component: {fileID: 1047160711}
-  - component: {fileID: 1047160715}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -750,39 +749,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!328 &1047160715
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1047160710}
-  m_Enabled: 0
-  m_VideoClip: {fileID: 32900000, guid: 2b18bc2b046c76145a50a24987c6a567, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 2127243988}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 1
-  m_AspectRatio: 5
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
-  m_Url: https://sendeyo.com/es/0e7007e3ed
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &1134597735
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +948,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fdd35e27e2bdf3c4e95b8d9e87f786af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
