@@ -32,7 +32,7 @@ public class PrincessBehaviour : MonoBehaviour
     public float attack2Cooldown = 1f;
     public float attack3Cooldown = 1f;
 
-    public float attack2ProyectileSpeed = 4;
+    public float attack3ProyectileSpeed = 4;
     private Vector3 proyectileDirection;
     private Transform player;
     private Vector3 myTeleportPosition;
@@ -134,7 +134,7 @@ public class PrincessBehaviour : MonoBehaviour
                 if (i == attack2ExclusionIndex) continue;
                 proyectile = Instantiate(proyectilePrefab, attack2Positions[i].position, new Quaternion(), gameObject.transform);
                 proyectile.transform.parent = null;
-                proyectile.speed = attack2ProyectileSpeed;
+                proyectile.speed = attack3ProyectileSpeed;
                 proyectile.transform.localScale = new Vector3(4,4,1);
                 proyectile.direction = proyectileDirection;
             }
@@ -154,11 +154,10 @@ public class PrincessBehaviour : MonoBehaviour
             {
                 proyectile = Instantiate(proyectilePrefab, transform.position, new Quaternion(), gameObject.transform);
                 proyectile.transform.parent = null;
-                proyectile.speed = attack2ProyectileSpeed;
                 proyectile.transform.localScale = new Vector3(4, 4, 1);
                 proyectile.direction = proyectileDirection;
             }
-            yield return new WaitForSeconds(attack3Cooldown);
+            yield return new WaitForSeconds(attack2Cooldown);
             available = true;
         }
     }
