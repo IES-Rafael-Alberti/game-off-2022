@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class DialogueController : MonoBehaviour
     private List<string> dialogueList;
     private int dialogueIndex;
     public PlayerMovement player;
+    [SerializeField] private Button nextButton;
+
     public void NewDialogue(string title,List<string> dialogues)
     {
         dialogueIndex = 0;
@@ -18,14 +21,18 @@ public class DialogueController : MonoBehaviour
         dialogueList = dialogues;
         dialogueText.text = dialogueList[dialogueIndex];
         dialogueSet.SetActive(true);
+        nextButton.Select();
     }
+
     public void ContinueDialogue()
     {
         dialogueIndex += 1;
         if (dialogueIndex == dialogueList.Count) EndDialogue();
         else dialogueText.text = dialogueList[dialogueIndex];
     }
-    public void EndDialogue() {
+
+    public void EndDialogue()
+    {
         dialogueSet.SetActive(false);
         player.ReceiveInput();
     }
