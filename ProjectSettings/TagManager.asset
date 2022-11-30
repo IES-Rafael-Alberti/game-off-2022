@@ -10,6 +10,8 @@ TagManager:
   - PlayerHitbox
   - EnemyHitbox
   - Event
+  - EnemyProyectile
+  - Princess
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - CameraBoundaries
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - PrincessBullets
   - 
   - 
   - 

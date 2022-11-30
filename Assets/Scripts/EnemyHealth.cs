@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public float gameOverMargin = 1f;
     public float hitAnimationSeconds = 0.5f;
     public bool isHit;
+    public bool isPrincess = false; 
 
     public void RecieveDamage(float damage)
     {
@@ -25,7 +26,14 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator DeathAnimation()
     {
-        yield return new WaitForSeconds(gameOverMargin);
-        gameObject.SetActive(false);
+        if (!isPrincess)
+        {
+            yield return new WaitForSeconds(gameOverMargin);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            yield return null;
+        }
     }
 }
