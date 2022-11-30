@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class DontDestroyOnLoad : MonoBehaviour
     private void Update()
     {
         age += Time.deltaTime * 0.01f;
+        if (SceneManager.GetActiveScene().buildIndex == 0) Destroy(gameObject);
     }
+
 
     private void Awake()
     {
+        
+
         foreach (DontDestroyOnLoad go in FindObjectsOfType(typeof(DontDestroyOnLoad)))
         if (go.name == name) objs.Add(go);
         if (objs.Count > 1)
@@ -31,5 +36,7 @@ public class DontDestroyOnLoad : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
+
+        
     }
 }
