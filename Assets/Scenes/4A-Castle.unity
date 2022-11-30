@@ -8895,7 +8895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathAnimation1Time: 0.1
   deathAnimation2Time: 2
-  invulnerabilityTime: 2
   isVulnerable: 1
   isTransformed: 0
   itsTransformingTime: 5
@@ -8931,7 +8930,7 @@ MonoBehaviour:
   attack3AnimationTimer: 1
   attack1Cooldown: 1
   attack2Cooldown: 4
-  attack3Cooldown: 8
+  attack3Cooldown: 5
   attack3ProyectileSpeed: 3
   proyectilePrefab: {fileID: 2275355743261284902, guid: b3a8f4486910fac49aa6ff4cf149ad15, type: 3}
   loadManager: {fileID: 1178366397}
@@ -29212,7 +29211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008475368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9990387, y: 1, z: -11}
+  m_LocalPosition: {x: 1.9975891, y: 1, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
