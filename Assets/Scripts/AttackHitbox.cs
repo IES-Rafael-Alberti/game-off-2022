@@ -33,8 +33,7 @@ public class AttackHitbox : MonoBehaviour
                 hasHit = false;
                 Destroy(gameObject);
             }
-            else { Destroy(gameObject); }
+            else Destroy(gameObject); 
     }
-
- 
 }
+

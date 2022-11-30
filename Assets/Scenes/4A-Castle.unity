@@ -6515,7 +6515,7 @@ GameObject:
   - component: {fileID: 277638676}
   m_Layer: 0
   m_Name: Princess
-  m_TagString: Untagged
+  m_TagString: Princess
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6548,7 +6548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a52726bd9aff8498e415ca4d796a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetProyectile: 2
   invulnerabilityTime: 2
   isVulnerable: 1
   isTransformed: 0
@@ -6567,9 +6566,13 @@ MonoBehaviour:
   - {fileID: 620176598}
   - {fileID: 767889513}
   - {fileID: 1591191354}
-  teleportAnimationTimer: 1
+  teleportAnimationTimer: 0.5
   isTeleporting: 0
-  attack1Cooldown: 3
+  offsetProyectile: 1.5
+  attack1AnimationTimer: 1
+  attack2AnimationTimer: 3
+  attack3AnimationTimer: 3
+  attack1Cooldown: 1
   attack2Cooldown: 3
   attack3Cooldown: 3
   proyectilePrefab: {fileID: 2275355743261284902, guid: b3a8f4486910fac49aa6ff4cf149ad15, type: 3}
