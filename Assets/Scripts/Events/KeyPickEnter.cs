@@ -11,6 +11,7 @@ public class KeyPickEnter : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") {
             DoorToOpen.GetComponent<ChangeScene>().canEnter = true;
+            DoorToOpen.SetActive(true);
             gameObject.SetActive(false);
 
                 }
