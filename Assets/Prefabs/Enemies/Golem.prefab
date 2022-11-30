@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5466228275146799537}
   - component: {fileID: 5466228275146799550}
   - component: {fileID: 5466228275146799539}
+  - component: {fileID: 6486156727358058936}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Enemy
@@ -122,6 +123,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9805298, y: 3.1030986}
   m_EdgeRadius: 0
+--- !u!114 &6486156727358058936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466228275146799548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4a35cb11c9a484499985f9248f32e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 0}
+  itemAmount: 1
 --- !u!1 &5466228275461377657
 GameObject:
   m_ObjectHideFlags: 0
