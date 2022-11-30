@@ -93,13 +93,16 @@ public class PrincessBehaviour : MonoBehaviour
             StartCoroutine(Teleport());
             StartCoroutine(SetVulnerable());
         } else {
-            isVulnerable = false;
-            available = false;
-            isAttack1 = false;
-            isAttack2 = false;
-            isAttack3 = false;
-            isDead = true;
-            StartCoroutine(PrincessDeath());
+        if (isVulnerable)
+            {
+                isVulnerable = false;
+                available = false;
+                isAttack1 = false;
+                isAttack2 = false;
+                isAttack3 = false;
+                isDead = true;
+                StartCoroutine(PrincessDeath());
+            }
         }
     }
 
