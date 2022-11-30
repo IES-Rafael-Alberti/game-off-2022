@@ -5,20 +5,15 @@ using UnityEngine;
 public class ProyectileBehaviour : MonoBehaviour
 {
 
-    public float speed;
+    public float speed = 8;
     public Vector3 direction;
 
     private Rigidbody2D rb;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-        Invoke("UpdateDirection", 0.2f);
-        
+        transform.right = -direction;
     }
-
-    private void UpdateDirection() {
-        transform.right = direction;
-    } 
 
     void Update() {
         rb.velocity = direction * speed;

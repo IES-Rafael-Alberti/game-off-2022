@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2275355743261284900}
   - component: {fileID: 2275355743261284903}
   - component: {fileID: 2275355743261284902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Proyectile
   m_TagString: EnemyProyectile
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 1, y: 1}
   m_Direction: 1
 --- !u!50 &2275355743261284900
 Rigidbody2D:
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 977730014399809230}
   - component: {fileID: 6771222871196207960}
   - component: {fileID: 7887048901182061030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: EnemyProyectile
   m_Icon: {fileID: 0}

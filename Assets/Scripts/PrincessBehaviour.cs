@@ -19,18 +19,20 @@ public class PrincessBehaviour : MonoBehaviour
     public bool available = false;
 
     public Transform[] teleportPositions;
+    public Transform[] attack2Positions;
     public float teleportAnimationTimer = 1f;
     public bool isTeleporting = false;
 
     public float offsetProyectile = 2f;
 
-    public float attack1AnimationTimer = 3f;
-    public float attack2AnimationTimer = 3f;
-    public float attack3AnimationTimer = 3f;
-    public float attack1Cooldown = 3f;
-    public float attack2Cooldown = 3f;
-    public float attack3Cooldown = 3f;
+    public float attack1AnimationTimer = 1f;
+    public float attack2AnimationTimer = 1f;
+    public float attack3AnimationTimer = 1f;
+    public float attack1Cooldown = 1f;
+    public float attack2Cooldown = 1f;
+    public float attack3Cooldown = 1f;
 
+    public float attack2ProyectileSpeed = 4;
     private Vector3 proyectileDirection;
     private Transform player;
     private Vector3 myTeleportPosition;
@@ -39,7 +41,8 @@ public class PrincessBehaviour : MonoBehaviour
     private int teleportIndex = -1;
     private int randomAtack = 0;
     private EnemyHealth princessHealth;
-
+    private int attack2ExclusionIndex;
+    private ProyectileBehaviour proyectile;
     [SerializeField] ProyectileBehaviour proyectilePrefab;
 
     void Start()
@@ -101,42 +104,61 @@ public class PrincessBehaviour : MonoBehaviour
     }
     IEnumerator Attack1()
     {
-        Debug.Log("ataque");
         isAttack1 = true;
         yield return new WaitForSeconds(attack1AnimationTimer);
         if (isAttack1)
         {
             isAttack1 = false;
-
             proyectileDirection = new Vector3(player.position.x - transform.position.x, player.position.y - transform.position.y, 0).normalized;
-            ProyectileBehaviour proyectile = Instantiate(proyectilePrefab, new Vector3(transform.localScale.x * offsetProyectile + transform.position.x, transform.position.y, 0), new Quaternion(), gameObject.transform);
+            proyectile = Instantiate(proyectilePrefab, new Vector3(transform.localScale.x * offsetProyectile + transform.position.x, transform.position.y, 0), new Quaternion(), gameObject.transform);
             proyectile.transform.parent = null;
-            if (proyectileDirection.x > 0) {
+            if (proyectileDirection.x < 0) {
                 proyectile.transform.localScale = new Vector3(-proyectile.transform.localScale.x, proyectile.transform.localScale.y, 1);
             }
             proyectile.direction = proyectileDirection;
             yield return new WaitForSeconds(attack1Cooldown);
             available = true;
         }
-        
     }
     IEnumerator Attack3()
     {
         isAttack3 = true;
-        yield return new WaitForSeconds(attack3Cooldown);
+        yield return new WaitForSeconds(attack3AnimationTimer);
         if (isAttack3)
         {
             isAttack3 = false;
+            attack2ExclusionIndex = Random.Range(0,8);
+            proyectileDirection = Vector3.down;
+            for (int i = 0; i < 8; i++)
+            {
+                if (i == attack2ExclusionIndex) continue;
+                proyectile = Instantiate(proyectilePrefab, attack2Positions[i].position, new Quaternion(), gameObject.transform);
+                proyectile.transform.parent = null;
+                proyectile.speed = attack2ProyectileSpeed;
+                proyectile.transform.localScale = new Vector3(4,4,1);
+                proyectile.direction = proyectileDirection;
+            }
+            yield return new WaitForSeconds(attack3Cooldown);
             available = true;
         }
     }
     IEnumerator Attack2()
     {
         isAttack2 = true;
-        yield return new WaitForSeconds(attack2Cooldown);
+        yield return new WaitForSeconds(attack2AnimationTimer);
         if (isAttack2)
         {
-            isAttack2 = false;
+            isAttack3 = false;
+            proyectileDirection = Vector3.down;
+            for (int i = 0; i < 8; i++)
+            {
+                proyectile = Instantiate(proyectilePrefab, transform.position, new Quaternion(), gameObject.transform);
+                proyectile.transform.parent = null;
+                proyectile.speed = attack2ProyectileSpeed;
+                proyectile.transform.localScale = new Vector3(4, 4, 1);
+                proyectile.direction = proyectileDirection;
+            }
+            yield return new WaitForSeconds(attack3Cooldown);
             available = true;
         }
     }
