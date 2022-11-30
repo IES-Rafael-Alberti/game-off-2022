@@ -22,6 +22,6 @@ public class PrincessAnimator : MonoBehaviour
         properties.SetBool("isAttack2", princess.isAttack2);
         properties.SetBool("isAttack3", princess.isAttack3);
         properties.SetBool("isFlying", princess.isFlying);
-
+        properties.SetBool("isDead", princess.isDead);
     }
 }
