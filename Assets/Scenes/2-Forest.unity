@@ -25012,7 +25012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3339424, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3294792, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74187,7 +74187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasEffect: {fileID: 1703192664740003849}
-  trippingTime: 3
+  trippingTime: 10
 --- !u!114 &1075116989
 MonoBehaviour:
   m_ObjectHideFlags: 0

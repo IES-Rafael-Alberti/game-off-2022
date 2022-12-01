@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PrincessBehaviour : MonoBehaviour
 {
-    public float deathAnimation1Time = 0.1f;
+    public float deathAnimation1Time = 0.5f;
     public float deathAnimation2Time = 2f;
 
     public bool isVulnerable = true;
@@ -49,7 +49,7 @@ public class PrincessBehaviour : MonoBehaviour
     private int attack2ExclusionIndex;
     private ProyectileBehaviour proyectile;
     [SerializeField] ProyectileBehaviour proyectilePrefab;
-    [SerializeField] LoadManager loadManager;
+    private LoadManager loadManager;
 
     void Start()
     {
@@ -57,8 +57,7 @@ public class PrincessBehaviour : MonoBehaviour
         princessHealth = GetComponent<EnemyHealth>();
         myTeleportPosition = transform.position;
         initialHeatlth = princessHealth.health;
-        
-
+        loadManager = GameObject.Find("Load Manager").GetComponent<LoadManager>();
     }
     void Update()
     {
