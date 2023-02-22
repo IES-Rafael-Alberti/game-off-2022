@@ -1,16 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class LoadVillageScene : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     public void StartButton()
     {
         SceneManager.LoadScene("0.5-Intro");
     }
-
 
     public void CloseScrollButton()
     {
