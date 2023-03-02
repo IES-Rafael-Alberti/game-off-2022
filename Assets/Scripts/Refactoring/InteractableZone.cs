@@ -10,6 +10,7 @@ public class InteractableZone : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private Image shadow;
 
     public Texture2D MouseCursor;
+    public Texture2D MouseCursorExit;
     public bool highlight;
 
     public UnityEvent MouseEnter;
@@ -44,7 +45,7 @@ public class InteractableZone : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private void OnMouseExit()
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(MouseCursorExit, Vector2.zero, CursorMode.Auto);
         if (highlight)
         {
             Color tempColor = shadow.color;
