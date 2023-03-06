@@ -22,6 +22,6 @@ public class HealthPotionEnter : DefaultEvent, ITextInfo
 
     public override string ToString()
     {
-        return $"Cura {healAmount} vidas.";
+        return $"SPANISH DRY-CURED HAM: Heals {healAmount}";
     }
 }

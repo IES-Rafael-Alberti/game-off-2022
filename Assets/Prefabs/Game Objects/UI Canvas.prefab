@@ -1312,6 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421367844380506039}
   - component: {fileID: 421367844380506024}
+  - component: {fileID: 5451996689610501475}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -1357,6 +1358,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
+--- !u!114 &5451996689610501475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421367844380506038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
+  highlight: 0
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &421367844478869488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +1968,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4165307352668013567}
+        m_TargetAssemblyTypeName: InteractiveZone, Assembly-CSharp
+        m_MethodName: HideTooltip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &4165307352668013567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,7 +1995,7 @@ MonoBehaviour:
   MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
   MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
-  toolTipText: Sound ON/OFF
+  toolTipText: Sound OFF
   highlight: 0
   MouseEnter:
     m_PersistentCalls:
@@ -2055,6 +2094,7 @@ GameObject:
   - component: {fileID: 6622524135934515452}
   - component: {fileID: 8163193031247654617}
   - component: {fileID: 6377779647486515992}
+  - component: {fileID: 7280325791562285755}
   m_Layer: 5
   m_Name: ButtonOff
   m_TagString: Untagged
@@ -2202,6 +2242,44 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7280325791562285755}
+        m_TargetAssemblyTypeName: InteractiveZone, Assembly-CSharp
+        m_MethodName: HideTooltip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7280325791562285755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435940068849775713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: Sound ON
+  highlight: 0
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8616784882557963874
 GameObject:
   m_ObjectHideFlags: 0

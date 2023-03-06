@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour, ITextInfo
 {
     public PlayerHealth playerHealth;
 
     private List<GameObject> gameObjects = new List<GameObject>();
     private int counter;
+
+    public string Show()
+    {
+        return $"{playerHealth.health} Lives Left";
+    }
+
     void Start()
     {
         foreach (Transform child in transform)

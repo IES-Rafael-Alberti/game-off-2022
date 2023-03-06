@@ -85,12 +85,13 @@ public class InteractiveZone : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void ShowTooltip()
     {
-        temp = Instantiate(toolTip, Vector3.zero, Quaternion.identity);
-        GameObject image = temp.transform.GetChild(0).gameObject;
-        image.transform.position = Input.mousePosition + Vector3.up + Vector3.right;
-        TextMeshProUGUI text = temp.GetComponentInChildren<TextMeshProUGUI>();
-        if (gameObject.GetComponent<ITextInfo>() == null) text.text = toolTipText;
-        else text.text = gameObject.GetComponent<ITextInfo>().Show();
+        if (temp == null)
+        {
+            temp = Instantiate(toolTip, Vector3.zero, Quaternion.identity);
+            TextMeshProUGUI text = temp.GetComponentInChildren<TextMeshProUGUI>();
+            if (gameObject.GetComponent<ITextInfo>() == null) text.text = toolTipText;
+            else text.text = gameObject.GetComponent<ITextInfo>().Show();
+        }
     }
 
     public void HideTooltip()

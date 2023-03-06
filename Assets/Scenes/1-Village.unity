@@ -17675,6 +17675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemRecover (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6193377138447033684, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
 --- !u!1 &969360298
@@ -19770,37 +19774,6 @@ Transform:
   m_Father: {fileID: 1152614313}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1478271347 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 421367843143356836, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
-  m_PrefabInstance: {fileID: 1202458360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1478271353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478271347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 0}
-  MouseCursorExit: {fileID: 0}
-  toolTip: {fileID: 0}
-  toolTipText: 
-  highlight: 0
-  MouseEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  MouseExit:
-    m_PersistentCalls:
-      m_Calls: []
-  MouseClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1494016160
 PrefabInstance:
   m_ObjectHideFlags: 0
