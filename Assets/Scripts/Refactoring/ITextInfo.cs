@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ITextInfo
 {
-    public void Show();
+    public string Show();
 }

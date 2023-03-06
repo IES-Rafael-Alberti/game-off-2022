@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22916794, y: -0.5, z: -12}
+  m_LocalPosition: {x: 0.22735977, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16271,6 +16271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1780aaf34eaa2504a8acdba6fcc133be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &480969930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6193377138299022205, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
+  m_PrefabInstance: {fileID: 1494016160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &483943468
 GameObject:
   m_ObjectHideFlags: 0
@@ -16633,39 +16638,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
   MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
   highlight: 0
   MouseEnter:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 623518582}
-        m_TargetAssemblyTypeName: HealthPotionEnter, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   MouseExit:
     m_PersistentCalls:
       m_Calls: []
   MouseClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &623518582 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6193377138299022202, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
-  m_PrefabInstance: {fileID: 966101939}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623518578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f959ce156bc7ec47b7523867b2067b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &643884224
 GameObject:
   m_ObjectHideFlags: 0
@@ -17639,6 +17623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1280266640}
     m_Modifications:
+    - target: {fileID: 6193377138299022202, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
+      propertyPath: toolTip
+      value: 
+      objectReference: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
     - target: {fileID: 6193377138299022203, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -19782,6 +19770,37 @@ Transform:
   m_Father: {fileID: 1152614313}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1478271347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 421367843143356836, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
+  m_PrefabInstance: {fileID: 1202458360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1478271353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478271347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 0}
+  MouseCursorExit: {fileID: 0}
+  toolTip: {fileID: 0}
+  toolTipText: 
+  highlight: 0
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1494016160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19844,6 +19863,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6193377138299022203, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
   m_PrefabInstance: {fileID: 1494016160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494016164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480969930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
+  highlight: 0
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1494798851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2283798897347592481, guid: 51d131fa32437e14c9079e23e7893b01, type: 3}
