@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, ITextInfo
 {
     public float health = 3;
     public float gameOverMargin = 1f;
@@ -35,5 +35,10 @@ public class EnemyHealth : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    public string TextInfo()
+    {
+        return $"{health} lives left";
     }
 }

@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour, ITextInfo
     private List<GameObject> gameObjects = new List<GameObject>();
     private int counter;
 
-    public string Show()
+    public string TextInfo()
     {
         return $"{playerHealth.health} Lives Left";
     }

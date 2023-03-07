@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22735977, y: -0.5, z: -12}
+  m_LocalPosition: {x: 0.22222137, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16394,6 +16394,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &507003634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+  m_PrefabInstance: {fileID: 23810909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &507003639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507003634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &523927976
 GameObject:
   m_ObjectHideFlags: 0
@@ -16640,7 +16670,6 @@ MonoBehaviour:
   MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
-  highlight: 0
   MouseEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -17781,6 +17810,11 @@ MonoBehaviour:
   cameraToFollow: {fileID: 92690565}
   paralaxRatio: 0.4
   offset: {x: 0, y: 0, z: 0}
+--- !u!1 &976796785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+  m_PrefabInstance: {fileID: 1758418888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &980646461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19852,7 +19886,6 @@ MonoBehaviour:
   MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
-  highlight: 0
   MouseEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -19908,6 +19941,31 @@ MonoBehaviour:
   popUpDuration: 2
   popUp: {fileID: 0}
   isDialoguePopUp: 1
+--- !u!114 &1494798857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494798851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: Something to read
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1513952198
 GameObject:
   m_ObjectHideFlags: 0
@@ -28565,6 +28623,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7744510126104586558, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
   m_PrefabInstance: {fileID: 1758418888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1758418894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976796785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1785916706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4204657854211904532, guid: cd770ac8bd61ae842ba2b5917e39df2c, type: 3}

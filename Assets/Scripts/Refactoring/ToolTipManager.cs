@@ -5,7 +5,8 @@ using UnityEngine;
 public class ToolTipManager : MonoBehaviour
 {
     [SerializeField]
-    private float padding = 1.5f;
+    private float offset = 1.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,18 @@ public class ToolTipManager : MonoBehaviour
     }
 
     void SetMousePosition() {
+        // TODO: Adjust offset to avoid tooltip under the cursor (aletuno)
+
         Transform image = gameObject.transform.GetChild(0);
+        // Get image size
         RectTransform rt = (RectTransform)image;
-        Vector3 mp = Input.mousePosition;
-        Vector3 dp = new Vector3(padding, padding, 0);
-        if (mp.x + rt.rect.width > Screen.width) dp.x = -(rt.rect.width + padding);
-        if (mp.y + rt.rect.height > Screen.height) dp.y = -(rt.rect.height + padding);
-        image.position = Input.mousePosition + dp;
+        Vector3 mousePosition = Input.mousePosition;
+        // Initialize offset vector
+        Vector3 offsetVector = new Vector3(offset, offset, 0);
+        // Negative offset in case tooltip is out of bounds
+        if (mousePosition.x + rt.rect.width > Screen.width) offsetVector.x = -(rt.rect.width + offset);
+        if (mousePosition.y + rt.rect.height > Screen.height) offsetVector.y = -(rt.rect.height + offset);
+        // Applies offset
+        image.position = Input.mousePosition + offsetVector;
     }
 }

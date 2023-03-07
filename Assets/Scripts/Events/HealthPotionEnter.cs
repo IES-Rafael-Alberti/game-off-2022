@@ -15,7 +15,7 @@ public class HealthPotionEnter : DefaultEvent, ITextInfo
         gameObject.SetActive(false);
     }
 
-    public string Show()
+    public string TextInfo()
     {
         return this.ToString();
     }
