@@ -303,6 +303,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715675300}
   m_CullTransparentMesh: 1
+--- !u!1 &996645278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996645280}
+  - component: {fileID: 996645279}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &996645279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996645278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f2bcfecf9a45f4389aa4e12bd6ab87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogFile: {fileID: 4900000, guid: 9769f7936b5384e42b14eef4839da463, type: 3}
+--- !u!4 &996645280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996645278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 265.8487, y: 152.87067, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186011331
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1031,7 @@ GameObject:
   - component: {fileID: 2058624612}
   - component: {fileID: 2058624614}
   - component: {fileID: 2058624613}
+  - component: {fileID: 2058624615}
   m_Layer: 5
   m_Name: IntroText
   m_TagString: Untagged
@@ -1033,14 +1079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is the story of Maurice, a French-born baker who lives with his brother
-    Louis. Maurice and his brother are sick of working everyday so they are looking
-    for a way of earning enough money once and for all.Coincidentally, the Royal
-    town crier passed in front of the bakery trumpeting that the king was looking
-    for a hero to find his daughter who had disappeared a few days ago without explanation.\r\n\r\nWithout
-    further thought, he armed himself with the hardest baguette he could find in
-    the store and set off in the direction of the village to begin his adventure
-    in search of the princess.\r"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89f8b7f9b3d0fa14fbd718939483a34a, type: 2}
   m_sharedMaterial: {fileID: -6520364601654582183, guid: 89f8b7f9b3d0fa14fbd718939483a34a, type: 2}
@@ -1117,3 +1156,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058624611}
   m_CullTransparentMesh: 1
+--- !u!114 &2058624615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058624611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d89231163f9e5c4d83f610754ee22a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogName: intro

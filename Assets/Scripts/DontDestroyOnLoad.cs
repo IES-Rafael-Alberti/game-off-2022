@@ -21,7 +21,7 @@ public class DontDestroyOnLoad : MonoBehaviour
         
 
         foreach (DontDestroyOnLoad go in FindObjectsOfType(typeof(DontDestroyOnLoad)))
-        if (go.name == name) objs.Add(go);
+             if (go.name == name) objs.Add(go);
         if (objs.Count > 1)
         {
             foreach (DontDestroyOnLoad go in objs)
