@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
+    // TODO: Refactoring. Maybe too complicated.
+
     public Vector3 respawn = Vector3.zero;
 
     private List<DontDestroyOnLoad> objs = new List<DontDestroyOnLoad>();

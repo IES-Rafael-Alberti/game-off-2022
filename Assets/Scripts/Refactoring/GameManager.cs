@@ -6,7 +6,7 @@ using Ink.Runtime;
 
 public class GameManager : MonoBehaviour
 {
-    static GameManager _instance;
+    public static GameManager Instance { get; private set; }
 
     public TextAsset dialogFile;
 
@@ -14,28 +14,36 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(_instance == null )
-            _instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            InitManager();
+        }
         else
             Destroy(this);
-
-        InitManager();
     }
 
     void InitManager()
     {
+        Debug.Log("Inicializando gamemanager");
+
+        // Initialize game
         dialogs = new Story(dialogFile.text);
     }
 
     public string GetDialog(string name)
     {
-        string result = "";
-        Container intro = dialogs.KnotContainerWithName(name);
-        foreach (Ink.Runtime.Object line in intro.content)
-            if(line.ToString() != "End") result += line.ToString();
-        return result;
+        return string.Join("", GetDialogList(name));
     }
 
+    public List<string> GetDialogList(string name)
+    {
+        List<string> result = new List<string>();
+        Container intro = dialogs.KnotContainerWithName(name);
+        foreach (Ink.Runtime.Object line in intro.content)
+            if (line.ToString() != "End") result.Add(line.ToString());
+        return result;
+    }
     // Start is called before the first frame update
     void Start()
     {
