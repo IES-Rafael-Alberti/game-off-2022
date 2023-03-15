@@ -6,6 +6,7 @@ public class PopUpEnter : DefaultEvent
 {
     public float popUpDuration;
     public TextPopUp popUp;
+    public string knot;
     public bool isDialoguePopUp = false;
     private void Start()
     {
@@ -21,6 +22,8 @@ public class PopUpEnter : DefaultEvent
     }
     private IEnumerator PopMeUp()
     {
+        if(!isDialoguePopUp)
+            popUp.text = GameManager.Instance.GetDialog(knot);
         popUp.enabled = true;
         yield return new WaitForSeconds(popUpDuration);
         if (!isDialoguePopUp) popUp.enabled = false;

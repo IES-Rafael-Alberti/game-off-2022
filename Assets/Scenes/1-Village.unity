@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21359253, y: -0.5, z: -12}
+  m_LocalPosition: {x: 0.22735977, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19210,6 +19210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 5
   popUp: {fileID: 0}
+  knot: boy
   isDialoguePopUp: 0
 --- !u!114 &1282730405
 MonoBehaviour:
@@ -19227,7 +19228,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   fontSize: 18
   alpha: 0.9
-  text: When I grow up I want to be a baker, like Maurice.
+  text: 
   background: {fileID: 2800000, guid: 4d6a99baee23b654f9e4bb672ae0b438, type: 3}
   rect:
     serializedVersion: 2
@@ -19944,6 +19945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 2
   popUp: {fileID: 0}
+  knot: 
   isDialoguePopUp: 1
 --- !u!114 &1494798857
 MonoBehaviour:
@@ -27754,6 +27756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 5
   popUp: {fileID: 0}
+  knot: nun
   isDialoguePopUp: 0
 --- !u!114 &1629277792
 MonoBehaviour:
@@ -27771,7 +27774,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   fontSize: 18
   alpha: 0.9
-  text: Help! Those bandits have taken today's collection!
+  text: 
   background: {fileID: 2800000, guid: 4d6a99baee23b654f9e4bb672ae0b438, type: 3}
   rect:
     serializedVersion: 2
@@ -28355,6 +28358,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4204657854211904535, guid: cd770ac8bd61ae842ba2b5917e39df2c, type: 3}
+      propertyPath: knot
+      value: oldman
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204657854211904535, guid: cd770ac8bd61ae842ba2b5917e39df2c, type: 3}
       propertyPath: title
       value: Anciano
       objectReference: {fileID: 0}
@@ -28671,6 +28678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 2
   popUp: {fileID: 0}
+  knot: 
   isDialoguePopUp: 1
 --- !u!114 &1785916708
 MonoBehaviour:
@@ -28679,7 +28687,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785916706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0f45d56d5750c340b78336dd6da0e5b, type: 3}
   m_Name: 
@@ -30073,6 +30081,10 @@ PrefabInstance:
     - target: {fileID: 2283798897347592481, guid: 51d131fa32437e14c9079e23e7893b01, type: 3}
       propertyPath: m_Name
       value: Notes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283798897347592495, guid: 51d131fa32437e14c9079e23e7893b01, type: 3}
+      propertyPath: knot
+      value: note1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51d131fa32437e14c9079e23e7893b01, type: 3}

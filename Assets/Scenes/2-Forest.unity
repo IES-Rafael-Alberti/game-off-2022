@@ -24755,10 +24755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2f47e113beda429da068a5109d9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueList:
-  - There is a strange mushroom in the ground...
-  - It looks tasty, do you want to eat it?
   title: Strange Mushroom
+  knot: mushroom
 --- !u!114 &673130207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25012,7 +25010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3398056, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3294792, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25351,6 +25349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 2
   popUp: {fileID: 0}
+  knot: 
   isDialoguePopUp: 0
 --- !u!61 &884771228
 BoxCollider2D:
@@ -74287,6 +74286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 1
   popUp: {fileID: 0}
+  knot: mushroom
   isDialoguePopUp: 1
 --- !u!61 &1075116991
 BoxCollider2D:
@@ -89156,6 +89156,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6770ea3eabbc694a9bad4112d5af65b, type: 3}
+--- !u!1 &1674397407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6193377138299022205, guid: e4329cbcd68eb6342ac119fa64bb493a, type: 3}
+  m_PrefabInstance: {fileID: 1006846065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1674397408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674397407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
+  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
+  toolTipText: 
+  MouseEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseExit:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1675262109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108422,6 +108452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 2
   popUp: {fileID: 0}
+  knot: 
   isDialoguePopUp: 1
 --- !u!1 &1952390627
 GameObject:
@@ -109771,10 +109802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2f47e113beda429da068a5109d9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueList:
-  - "The note talks about a secret entrance to the princess's castle but doesn\u2019t
-    say how to get there."
   title: Note
+  knot: note2
 --- !u!114 &2283798896507719495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109838,6 +109867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDuration: 2
   popUp: {fileID: 0}
+  knot: 
   isDialoguePopUp: 1
 --- !u!114 &2283798896507719499
 MonoBehaviour:

@@ -25,23 +25,27 @@ public class GameManager : MonoBehaviour
 
     void InitManager()
     {
-        Debug.Log("Inicializando gamemanager");
-
         // Initialize game
         dialogs = new Story(dialogFile.text);
     }
 
     public string GetDialog(string name)
     {
-        return string.Join("", GetDialogList(name));
+        return string.Join("\n", GetDialogList(name));
     }
 
     public List<string> GetDialogList(string name)
     {
         List<string> result = new List<string>();
-        Container intro = dialogs.KnotContainerWithName(name);
-        foreach (Ink.Runtime.Object line in intro.content)
-            if (line.ToString() != "End") result.Add(line.ToString());
+        if (name != null)
+        {
+            Container intro = dialogs.KnotContainerWithName(name);
+            foreach (Ink.Runtime.Object line in intro.content)
+                if (line.ToString() != "End" && line.ToString() != "\n") result.Add(line.ToString());
+        } else
+        {
+            result.Add("error");
+        }
         return result;
     }
     // Start is called before the first frame update
