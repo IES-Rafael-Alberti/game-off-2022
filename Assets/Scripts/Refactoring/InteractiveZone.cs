@@ -8,11 +8,11 @@ using UnityEngine.UI;
 
 public class InteractiveZone : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
-    public Texture2D MouseCursor;
-    public Texture2D MouseCursorExit;
+    private Texture2D MouseCursorDefault;
+    public Texture2D MouseCursorMod;
     public GameObject toolTip;
     public string toolTipText;
-
+    private GameManager gameManager;
     public UnityEvent MouseEnter;
     public UnityEvent MouseExit;
     public UnityEvent MouseClick;
@@ -22,13 +22,16 @@ public class InteractiveZone : MonoBehaviour, IPointerEnterHandler, IPointerExit
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindFirstObjectByType<GameManager>();
         MouseEnter.AddListener(ShowTooltip);
         MouseExit.AddListener(HideTooltip);
+        MouseCursorDefault = gameManager.DefaultCursor;
+        if (!MouseCursorMod) MouseCursorMod = gameManager.DefaultInteractiveCursor;
     }
 
     void OnMouseEnter()
     {
-        Cursor.SetCursor(MouseCursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(MouseCursorMod, Vector2.zero, CursorMode.Auto);
         MouseEnter?.Invoke();
     }
 
@@ -39,7 +42,7 @@ public class InteractiveZone : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void OnMouseExit()
     {
-        Cursor.SetCursor(MouseCursorExit, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(MouseCursorDefault, Vector2.zero, CursorMode.Auto);
         MouseExit?.Invoke();
     }
 

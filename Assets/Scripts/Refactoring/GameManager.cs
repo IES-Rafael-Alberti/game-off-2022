@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public TextAsset dialogFile;
-
+    public Texture2D DefaultCursor;
+    public Texture2D DefaultInteractiveCursor;
     private Story dialogs;
 
     private void Awake()

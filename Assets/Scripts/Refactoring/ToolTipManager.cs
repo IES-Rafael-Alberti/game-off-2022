@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ToolTipManager : MonoBehaviour
 {
-    [SerializeField]
-    private float offset = 1.5f;
+    [SerializeField] private float Offsetx = 1.5f;
+    [SerializeField] private float Offsety = 1.5f;
 
 
     // Start is called before the first frame update
@@ -28,10 +28,10 @@ public class ToolTipManager : MonoBehaviour
         RectTransform rt = (RectTransform)image;
         Vector3 mousePosition = Input.mousePosition;
         // Initialize offset vector
-        Vector3 offsetVector = new Vector3(offset, offset, 0);
+        Vector3 offsetVector = new Vector3(offsetx, offsety, 0);
         // Negative offset in case tooltip is out of bounds
-        if (mousePosition.x + rt.rect.width > Screen.width) offsetVector.x = -(rt.rect.width + offset);
-        if (mousePosition.y + rt.rect.height > Screen.height) offsetVector.y = -(rt.rect.height + offset);
+        if (mousePosition.x + rt.rect.width > Screen.width) offsetVector.x = -(rt.rect.width + offsetx);
+        if (mousePosition.y + rt.rect.height > Screen.height) offsetVector.y = -(rt.rect.height + offsety);
         // Applies offset
         image.position = Input.mousePosition + offsetVector;
     }
