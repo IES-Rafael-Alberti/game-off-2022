@@ -13,13 +13,16 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverCanvas;
     public LoadManager loadManager;
     public float initialHealth;
-    public float hitAnimationSeconds = 1f; 
+    public float hitAnimationSeconds = 1f;
+
+    public RefactoredHealthBar healthBar;
     
     private PlayerMovement playerMovement;
 
     private void Start()
     {
         initialHealth = health;
+        healthBar.SetHealth((int) health);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health > 0){
             health -= damage;
+            healthBar.SetHealth((int) health);
             StartCoroutine(HitAnimation());
             if (health <= 0)
             {
