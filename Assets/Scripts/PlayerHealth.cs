@@ -15,8 +15,6 @@ public class PlayerHealth : MonoBehaviour, IHealth {
     public float initialHealth;
     public float hitAnimationSeconds = 1f;
 
-    public RefactoredHealthBar healthBar;
-
     private event EventHandler<OnRecieveDamageEventArgs> OnRecieveDamage;
     public class OnRecieveDamageEventArgs : EventArgs {
         public float damage;

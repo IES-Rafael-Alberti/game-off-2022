@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class RefactoredHealthBar : MonoBehaviour {
 
     public Slider slider;
+    public Gradient gradient;
+    public Image fill;
 
     private IHealth healthInterface;
 
@@ -13,8 +15,9 @@ public class RefactoredHealthBar : MonoBehaviour {
         healthInterface = gameObject.GetComponentInParent<IHealth>();
     }
 
-    public void Update() { 
+    public void Update() {
         slider.value = healthInterface.GetActualHealth();
+        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
 }

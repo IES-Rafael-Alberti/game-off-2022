@@ -87,7 +87,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         if(collision.collider.gameObject.CompareTag("PlayerHitbox"))
         if (isVulnerable && princessHealth.health != 1) {
-            princessHealth.RecieveDamage(1);
+            princessHealth.InvokeRecieveDamage(1);
             StartCoroutine(Teleport());
         } else 
         if (isVulnerable)
