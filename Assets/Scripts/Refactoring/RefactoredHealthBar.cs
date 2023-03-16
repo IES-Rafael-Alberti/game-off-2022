@@ -7,8 +7,14 @@ public class RefactoredHealthBar : MonoBehaviour {
 
     public Slider slider;
 
-    public void SetHealth(int health) { 
-        slider.value = health;
+    private IHealth healthInterface;
+
+    private void Start() {
+        healthInterface = gameObject.GetComponentInParent<IHealth>();
+    }
+
+    public void Update() { 
+        slider.value = healthInterface.GetActualHealth();
     }
 
 }

@@ -8,6 +8,7 @@ public class AttackHitbox : MonoBehaviour
     private EnemyHealth enemyHealth;
     private PlayerHealth playerHealth;
     public bool hasHit = true;
+
     private void OnEnable()
     {
         hasHit = true;
@@ -23,13 +24,13 @@ public class AttackHitbox : MonoBehaviour
         if (CompareTag("EnemyHitbox")) if (collision.gameObject.CompareTag("Player") && !collision.collider.gameObject.CompareTag("PlayerHitbox"))
             {
                 playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-                if (hasHit) playerHealth.RecieveDamage(damage);
+                if (hasHit) playerHealth.InvokeRecieveDamage(damage);
                 hasHit = false;
             }
         if (CompareTag("EnemyProyectile")) if (collision.gameObject.CompareTag("Player"))
             {
                 playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-                if (hasHit) playerHealth.RecieveDamage(damage);
+                if (hasHit) playerHealth.InvokeRecieveDamage(damage);
                 hasHit = false;
                 Destroy(gameObject);
             }

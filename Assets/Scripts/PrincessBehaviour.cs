@@ -106,7 +106,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(deathAnimation1Time);
         isDead = false;
-        player.gameObject.GetComponent<PlayerHealth>().RecieveDamage(-5);
+        player.gameObject.GetComponent<PlayerHealth>().InvokeHeal(5);
         yield return new WaitForSeconds(deathAnimation2Time);
         loadManager.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
