@@ -17,10 +17,11 @@ public class ToolTipManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetMousePosition(); 
+        SetMousePosition();
     }
 
-    void SetMousePosition() {
+    void SetMousePosition()
+    {
         // TODO: Adjust offset to avoid tooltip under the cursor (aletuno)
 
         Transform image = gameObject.transform.GetChild(0);
@@ -28,10 +29,28 @@ public class ToolTipManager : MonoBehaviour
         RectTransform rt = (RectTransform)image;
         Vector3 mousePosition = Input.mousePosition;
         // Initialize offset vector
-        Vector3 offsetVector = new Vector3(offsetx, offsety, 0);
+        Vector3 offsetVector = new Vector3(Offsetx, Offsety, 0);
         // Negative offset in case tooltip is out of bounds
-        if (mousePosition.x + rt.rect.width > Screen.width) offsetVector.x = -(rt.rect.width + offsetx);
-        if (mousePosition.y + rt.rect.height > Screen.height) offsetVector.y = -(rt.rect.height + offsety);
+
+        if(mousePosition.x + rt.rect.width > Screen.width && mousePosition.y + rt.rect.height > Screen.height)
+        {
+            offsetVector.y = -(rt.rect.height + Offsety);
+            offsetVector.x = -(rt.rect.width + Offsetx);
+
+        }
+        else
+        {
+            if (mousePosition.y + rt.rect.height > Screen.height)
+            {
+                 offsetVector.y = -(rt.rect.height);
+                offsetVector.x = 25;
+            }
+            if (mousePosition.x + rt.rect.width > Screen.width)
+            {
+                offsetVector.x = -(rt.rect.width + Offsetx);
+            }
+        }
+
         // Applies offset
         image.position = Input.mousePosition + offsetVector;
     }

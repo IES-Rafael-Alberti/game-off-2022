@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22735977, y: -0.5, z: -12}
+  m_LocalPosition: {x: 0.24232674, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16411,8 +16411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
-  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  MouseCursorMod: {fileID: 0}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
   MouseEnter:
@@ -16666,8 +16665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
-  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  MouseCursorMod: {fileID: 0}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
   MouseEnter:
@@ -19887,8 +19885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
-  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  MouseCursorMod: {fileID: 0}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
   MouseEnter:
@@ -19959,8 +19956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
-  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  MouseCursorMod: {fileID: 0}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: Something to read
   MouseEnter:
@@ -28646,8 +28642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d6e2b95c64544dbf725f079895730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
-  MouseCursorExit: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  MouseCursorMod: {fileID: 0}
   toolTip: {fileID: 6720393605623599766, guid: c5354f1135e6c9f4ab55850b6cf21a01, type: 3}
   toolTipText: 
   MouseEnter:
@@ -29349,6 +29344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogFile: {fileID: 4900000, guid: 9769f7936b5384e42b14eef4839da463, type: 3}
+  DefaultCursor: {fileID: 2800000, guid: 661dd4afb4223b1438a5b421bc8515c2, type: 3}
+  DefaultInteractiveCursor: {fileID: 2800000, guid: fc3f04fa9dba04a45a92a85c4aaa0b18, type: 3}
 --- !u!4 &2050212654
 Transform:
   m_ObjectHideFlags: 0
