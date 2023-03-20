@@ -26,13 +26,11 @@ public class EnemyBehavior : MonoBehaviour
     {
         physics = GetComponent<Rigidbody2D>(); 
         startPosition = transform.position;
-        endPosition = transform.position + endPosition; 
+        endPosition = transform.position + endPosition;
     }
 
     void Update()
     {
-        MoveEnemy();
-        
         // Negative Scale for flipping enemy
         if (physics.velocity.x > 0) {
             transform.localScale = new Vector3(-1, 1, 1) ;
@@ -45,27 +43,32 @@ public class EnemyBehavior : MonoBehaviour
         laserHits = Physics2D.RaycastAll(origin, lookingAt * transform.localScale.x, range);
         Debug.DrawRay(origin, lookingAt * transform.localScale.x * range, Color.red);
         if (!isAttacking)
+        {
             foreach (var hit in laserHits)
             {
                 if (hit.collider == null) continue;
                 if (hit.collider.tag == "Player") StartCoroutine(Attack());
             }
+            MoveEnemy();
+        }
     }
 
-    private void MoveEnemy()
+    void MoveEnemy()
     {
-        Vector3 targetPosition = (goingLeft) ? endPosition : startPosition;
-        if (!isAttacking)
-            physics.velocity = (goingLeft) ? new Vector2(-speed, physics.velocity.y) : new Vector2(speed, physics.velocity.y);
-        else physics.velocity = Vector2.zero;
+            Vector3 targetPosition = (goingLeft) ? endPosition : startPosition;
+            if (!isAttacking)
+                physics.velocity = (goingLeft) ? new Vector2(-speed, physics.velocity.y) : new Vector2(speed, physics.velocity.y);
+            else physics.velocity = Vector2.zero;
 
-        if (goingLeft)
-        if (transform.position.x <= targetPosition.x) goingLeft = !goingLeft;
-        if (!goingLeft)
-        if (transform.position.x >= targetPosition.x) goingLeft = !goingLeft;
+            if (goingLeft)
+                if (transform.position.x <= targetPosition.x) goingLeft = !goingLeft;
+            if (!goingLeft)
+                if (transform.position.x >= targetPosition.x) goingLeft = !goingLeft;
     }
     IEnumerator Attack()
     {
+        physics.velocity = new Vector2(0, 0);
+        GetComponentInChildren<Animator>().Play("EnemyAttack");
         isAttacking = true;
         attackHitBox.SetActive(true);
         //sprite.SetBool("isAttacking", isAttacking);
