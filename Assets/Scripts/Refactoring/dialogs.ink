@@ -5,6 +5,7 @@ Without further thought, he armed himself with the hardest baguette he could fin
 -> END
 === oldman ===
 Don't waste any more time Maurice! Head into the forest.
+Hurry up!!!
 -> END
 === note1 ===
 You find a note that says: Last night I saw the princess running out of the village towards the forest and she was accompanied by two knights.
@@ -14,7 +15,7 @@ You flip the note: Onion, Garlic, Tomatoes, Potatoes ...
 Help! Those bandits have taken today's collection!
 -> END
 === boy ===
-When I grow up I want to be a baker, like Maurice.
+I like gladiators movies...
 -> END
 === mushroom ===
 There is a strange mushroom in the ground...
