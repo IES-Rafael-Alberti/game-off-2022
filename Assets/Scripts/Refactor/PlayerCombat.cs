@@ -11,6 +11,27 @@ public class PlayerCombat : MonoBehaviour
 
     private PlayerMovement player;
     private bool isAttacking = false;
+    public float radius;
+    public Transform circleOrigin;
+
+    public void DetectColliders()
+    {
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(circleOrigin.position, radius))
+        {
+            HealthManager health;
+            if(health = collider.GetComponent<HealthManager>())
+            {
+                health.GetHit(1, gameObject);
+            }
+
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Vector3 position = circleOrigin == null ? Vector3.zero : circleOrigin.position;
+        Gizmos.DrawWireSphere(position, radius);
+    }
 
     private void Start()
     {
@@ -21,7 +42,6 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && !isAttacking && player.CanMove())
         {
-
             StartCoroutine(Attack());
         }
     }
@@ -29,9 +49,9 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
-        attackHitBox.SetActive(true);
+        GetComponentInChildren<Animator>().SetBool("isAttacking", true);
         yield return new WaitForSeconds(animationTime);
-        attackHitBox.SetActive(false);
+        GetComponentInChildren<Animator>().SetBool("isAttacking", false);
         yield return new WaitForSeconds(cooldown);
         isAttacking = false;
     }

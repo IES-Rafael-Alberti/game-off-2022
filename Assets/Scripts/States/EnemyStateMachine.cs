@@ -9,6 +9,8 @@ public class EnemyStateMachine : MonoBehaviour
     public Transform startPosition;
     public Transform endPosition;
 
+    public float enemyHealth = 5;
+
     EnemyMainState currentState;
     public EnemyMainState idleState = new EnemyIdleState();
     public EnemyMainState attackState = new EnemyAttackState();
@@ -37,6 +39,13 @@ public class EnemyStateMachine : MonoBehaviour
     {
         currentState.Exit(this);
         currentState = state;
+        currentState.Enter(this);
+    }
+
+    public void ResetState()
+    {
+        currentState.Exit(this);
+        currentState = idleState;
         currentState.Enter(this);
     }
 }

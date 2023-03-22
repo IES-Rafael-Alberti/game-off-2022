@@ -380,6 +380,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDamagedEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2558121655532926436}
+        m_TargetAssemblyTypeName: EnemyStateMachine, Assembly-CSharp
+        m_MethodName: ResetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3356836364195833558}
+        m_TargetAssemblyTypeName: EnemyManager, Assembly-CSharp
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3650402283481434587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +435,7 @@ GameObject:
   - component: {fileID: 7744510126104586558}
   - component: {fileID: 7744510126104586559}
   - component: {fileID: 7744510126104586556}
+  - component: {fileID: 3356836364195833558}
   - component: {fileID: 1972249692}
   - component: {fileID: 2558121655532926436}
   m_Layer: 0
@@ -469,6 +500,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.8}
   m_Direction: 0
+--- !u!114 &3356836364195833558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744510126104586546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1cfe5e0190f994d8ff03d57f8f4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1972249692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,3 +545,4 @@ MonoBehaviour:
   attackHitBox: {fileID: 2697960274334999843}
   startPosition: {fileID: 0}
   endPosition: {fileID: 7179155087062419585}
+  enemyHealth: 5

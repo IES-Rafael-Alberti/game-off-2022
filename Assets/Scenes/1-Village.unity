@@ -135,6 +135,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1703910884}
     m_Modifications:
+    - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (2)
@@ -527,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92690565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1935482, y: -0.5, z: -12}
+  m_LocalPosition: {x: -0.4458599, y: -0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28365,6 +28373,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1703910884}
     m_Modifications:
+    - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7744510126104586546, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (1)
@@ -28857,6 +28873,14 @@ PrefabInstance:
     - target: {fileID: 1785633201, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: respawn.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764006343873901121, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764006343873901121, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+      propertyPath: animationTime
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7944809573089530085, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: m_Name
