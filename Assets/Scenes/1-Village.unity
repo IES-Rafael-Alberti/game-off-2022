@@ -28375,7 +28375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.33
+      value: -11.68
       objectReference: {fileID: 0}
     - target: {fileID: 7179155087062419585, guid: d82609499a36e7647850ebc6b0a68660, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28876,11 +28876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764006343873901121, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7764006343873901121, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: animationTime
-      value: 35
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7944809573089530085, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: m_Name

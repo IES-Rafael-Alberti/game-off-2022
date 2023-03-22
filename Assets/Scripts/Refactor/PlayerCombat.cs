@@ -49,9 +49,9 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
-        GetComponentInChildren<Animator>().SetBool("isAttacking", true);
+        attackHitBox.SetActive(true);
         yield return new WaitForSeconds(animationTime);
-        GetComponentInChildren<Animator>().SetBool("isAttacking", false);
+        attackHitBox.SetActive(false);
         yield return new WaitForSeconds(cooldown);
         isAttacking = false;
     }

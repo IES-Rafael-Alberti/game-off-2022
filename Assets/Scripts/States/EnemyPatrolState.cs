@@ -34,10 +34,16 @@ public class EnemyPatrolState : EnemyMainState
         if (initialPos && position == enemyStateMachine.endPosition.position || !initialPos && position == enemyStateMachine.startPosition.position)
             enemyStateMachine.SwitchState(enemyStateMachine.idleState);
 
-        if (position == enemyStateMachine.startPosition.position)
-            enemyStateMachine.owner.transform.position = Vector3.MoveTowards(position, enemyStateMachine.endPosition.position, 5 * Time.deltaTime);
+        if (initialPos)
+        {
+            enemyStateMachine.owner.transform.position = Vector2.MoveTowards(position, enemyStateMachine.endPosition.position, 5 * Time.deltaTime);
+            enemyStateMachine.owner.GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
         else
-            enemyStateMachine.owner.transform.position = Vector3.MoveTowards(position, enemyStateMachine.startPosition.position, 5 * Time.deltaTime);
+        {
+            enemyStateMachine.owner.transform.position = Vector2.MoveTowards(position, enemyStateMachine.startPosition.position, 5 * Time.deltaTime);
+            enemyStateMachine.owner.GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
 
         position = enemyStateMachine.owner.transform.position;
     }
