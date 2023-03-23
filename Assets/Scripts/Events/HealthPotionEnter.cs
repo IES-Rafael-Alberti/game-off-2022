@@ -11,7 +11,7 @@ public class HealthPotionEnter : DefaultEvent, ITextInfo
 
     public override void EventOnEnter(PlayerMovement player)
     {
-        player.gameObject.GetComponent<PlayerHealth>().RecoverHealth(healAmount);
+        player.gameObject.GetComponent<PlayerHealth>().InvokeHeal(healAmount);
         gameObject.SetActive(false);
     }
 

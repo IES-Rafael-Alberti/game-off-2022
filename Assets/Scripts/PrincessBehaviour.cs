@@ -87,7 +87,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         if(collision.collider.gameObject.CompareTag("PlayerHitbox"))
         if (isVulnerable && princessHealth.health != 1) {
-            princessHealth.RecieveDamage(1);
+            princessHealth.InvokeRecieveDamage(1);
             StartCoroutine(Teleport());
         } else 
         if (isVulnerable)
@@ -106,7 +106,7 @@ public class PrincessBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(deathAnimation1Time);
         isDead = false;
-        player.gameObject.GetComponent<PlayerHealth>().RecieveDamage(-5);
+        player.gameObject.GetComponent<PlayerHealth>().InvokeHeal(5);
         yield return new WaitForSeconds(deathAnimation2Time);
         loadManager.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

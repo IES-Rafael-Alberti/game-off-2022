@@ -5585,6 +5585,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 351316250, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 351316250, guid: e17eebf5b410f1b4682a0d513c8417be, type: 3}
       propertyPath: loadManager
       value: 
       objectReference: {fileID: 244814359}
@@ -24467,7 +24471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25010,7 +25014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733228700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3294792, y: 1.4999995, z: -11}
+  m_LocalPosition: {x: -3.3318386, y: 1.4999995, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109548,6 +109552,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1785633197}
+    - target: {fileID: 421367844380506038, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 421367844478869490, guid: 0b0676c48e0e45947b00fe021e04d4ac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -110355,7 +110363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3629122630529012951, guid: 403d1d4e6d813c0449f5c913c121923a, type: 3}
       propertyPath: m_LocalPosition.x
