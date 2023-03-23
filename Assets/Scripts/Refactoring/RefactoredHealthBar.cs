@@ -9,7 +9,13 @@ public class RefactoredHealthBar : MonoBehaviour {
     public Gradient gradient;
     public Image fill;
 
+    public float scale = 1.0f;
+
     private IHealth healthInterface;
+
+    public void Awake() {
+        transform.localScale =  transform.localScale * scale;
+    }
 
     private void Start() {
         healthInterface = gameObject.GetComponentInParent<IHealth>();
